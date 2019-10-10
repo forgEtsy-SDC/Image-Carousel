@@ -1,22 +1,23 @@
-// double check file path
+// Import db product json
 const jewelry = require('./jewelry.js');
 const housewares = require('./housewares.js');
 const accessories = require('./accessories.js');
 const toys = require('./toys.js');
-// import reviews from './reviews.json';
-/** import YOUR port number here */
-const { port } = require('./server/server.js')
-
+// Use faker for random review generator
 const faker = require('faker');
+// Connect database
+const { port } = require('./server/server.js')
 const mongoose = require('mongoose');
 mongoose.connect(`mongodb://localhost:${port}/products`, {useNewUrlParser: true})
-//connect that shit
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log(`we're connected!`)
 
 })
+
+// Set up schemas for database 'products'
 const imagesSchema = new mongoose.Schema({
   listing_image_id: Number,
   listing_id: Number,
@@ -88,6 +89,7 @@ const reviewSchema = new mongoose.Schema({
 const Products = mongoose.model('Products', productSchema);
 const Reviews = mongoose.model('Reviews', reviewSchema);
 
+// Saves array of reviews to database
 const reviewsSave = reviews => {
   Reviews.insertMany(reviews)
     .then(() => {
@@ -98,6 +100,7 @@ const reviewsSave = reviews => {
     })
 }
 
+// Saves array of products to database
 const productsSave = products => {
   Products.insertMany(products)
     .then((data) => {
@@ -127,15 +130,12 @@ const productsSave = products => {
     .then((reviews) => {
       reviewsSave(reviews);
     })
-    .then((data) => {
-      // populate component with data
-
-    })
     .catch((err) => {
       console.log('...product saving err... :(');
     })
 }
 
+// Seed database with product items
 productsSave(jewelry.results);
 productsSave(housewares.results);
 productsSave(accessories.results);
