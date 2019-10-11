@@ -5,8 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo no test script available",
-    "start": "nodemon server.js",
-    "dev": "webpack -d --watch"
+    "start": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,11 +21,13 @@
     "axios": "^0.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.0",
+    "faker": "^4.1.0",
+    "image-downloader": "^3.5.0",
     "mongoose": "^5.5.14"
   },
   "devDependencies": {
     "live-server": "^1.2.1",
-    "nodemon": "^1.19.0",
+    "nodemon": "^1.19.3",
     "path": "^0.12.7"
   }
 }

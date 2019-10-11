@@ -1,12 +1,14 @@
 // Import db product json
-const jewelry = require('./jewelry.js');
-const housewares = require('./housewares.js');
-const accessories = require('./accessories.js');
-const toys = require('./toys.js');
+const jewelry = require('../jewelry.js');
+const housewares = require('../housewares.js');
+const accessories = require('../accessories.js');
+const toys = require('../toys.js');
+
 // Use faker for random review generator
 const faker = require('faker');
+
 // Connect database
-const { port } = require('./server/server.js')
+const { port } = require('../server/server.js')
 const mongoose = require('mongoose');
 mongoose.connect(`mongodb://localhost:${port}/products`, {useNewUrlParser: true})
 
@@ -96,7 +98,7 @@ const reviewsSave = reviews => {
       console.log('...Saved reviews to database...')
     })
     .catch((err) => {
-      console.log('...review saving err... :(', err);
+      console.log('...review saving err... :(', err.code);
     })
 }
 
@@ -140,3 +142,4 @@ productsSave(jewelry.results);
 productsSave(housewares.results);
 productsSave(accessories.results);
 productsSave(toys.results);
+
