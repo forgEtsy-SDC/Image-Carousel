@@ -19,6 +19,9 @@ app.get('/urls', (req, res) => {
     if(err){
       console.log(err)
       res.sendStatus(404)
+    }else if(urls[0].type === 'Error'){
+      console.log('Listing Id not found');
+      res.sendStatus(422)
     }else{
       res.send(urls);
     }

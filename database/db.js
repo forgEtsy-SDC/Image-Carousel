@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
-const { port } = require('../server/server.js')
 const { seedDatabase, Products } = require('./schema.js');
 
 // Connect database
-mongoose.connect(`mongodb://localhost:${port}/products`, {useNewUrlParser: true})
+mongoose.connect(`mongodb://mongo:27017/docker-server-mongo`, {useNewUrlParser: true})
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -14,6 +13,12 @@ db.once('open', function() {
 
 const getImageUrls = (productId, callback) => {
   Products.find({listing_id: productId}, (err, results) => {
+    if(results.length === 0){
+      results[0] = {
+        type: 'Error',
+        message: 'No listing_id found'
+      }
+    }
     if(err){
       callback(err, null);
     }else{
