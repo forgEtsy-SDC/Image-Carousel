@@ -19,7 +19,6 @@ const getImageUrls = (productId, callback) => {
         message: 'No listing_id found'
       }
     }
-
     if(err){
       callback(err, null);
     }else{
