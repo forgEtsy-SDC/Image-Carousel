@@ -1,17 +1,14 @@
-FROM NODE:10
-# Create app directory
-WORKDIR usr/src/app
+FROM node:10
 
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-COPY package*.json
-# Install app dependencies
+# Create app directory
+WORKDIR /usr/src/app
+#install app dependencies
+COPY package*.json ./
 RUN npm install
 
-# Bundle app source
+# Bundle app source
 COPY . .
 
-# or whatever port you’re using for your db
 EXPOSE 3003
 
-# run npm start. command scripts are an array
 CMD ["npm", "start"]
