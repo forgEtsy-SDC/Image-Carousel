@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 
 // Import product files
 const jewelry = require('../jewelry.js');
-const housewares = require('../housewares.js');
+// const housewares = require('../housewares.js');
 const accessories = require('../accessories.js');
-const toys = require('../toys.js');
+// const toys = require('../toys.js');
 
 // Set up schemas for database 'products'
 const imagesSchema = new mongoose.Schema({
@@ -20,6 +20,14 @@ const imagesSchema = new mongoose.Schema({
   full_width: Number,
 })
 
+const optionsSchema = new mongoose.Schema({
+  title: String,
+  description_1: String,
+  description_2: String,
+  description_3: String,
+  description_4: String,
+})
+
 const productSchema = new mongoose.Schema({
   listing_id: { // <-- product id
     type: Number,
@@ -29,36 +37,13 @@ const productSchema = new mongoose.Schema({
   description: String,
   price: Number,
   category_path: [String],
+  product_options: [optionsSchema],
   Images: [imagesSchema],
   Shop: {
     shop_id: Number,
     shop_name: String,
     title: String,
     icon_url_fullxfull: String,
-  },
-  
-  product_options: {
-    option_1: {
-      title: String,
-      description_1: String,
-      description_2: String,
-      description_3: String,
-      description_4: String,
-    },
-    option_2: {
-      title: String,
-      description_1: String,
-      description_2: String,
-      description_3: String,
-      description_4: String,
-    },
-    option_3: {
-      title: String,
-      description_1: String,
-      description_2: String,
-      description_3: String,
-      description_4: String,
-    },
   },
 });
 
@@ -135,9 +120,9 @@ const seedDatabase = () => {
       }else{
         if(count === 0){
         productsSave(jewelry.results);
-        productsSave(housewares.results);
+        // productsSave(housewares.results);
         productsSave(accessories.results);
-        productsSave(toys.results);
+        // productsSave(toys.results);
       }
     }
   })
