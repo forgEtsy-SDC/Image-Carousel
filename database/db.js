@@ -30,7 +30,22 @@ const getImageUrls = (productId, callback) => {
   })
 }
 
+const getRandomProduct = (callback) => {
+  Products.count((err, count) => {
+    // Get a random entry
+    var random = Math.floor(Math.random() * count)
+    Products.find({}, (err, results) => {
+      if(err){
+        callback(err, null)
+      }else{
+        callback(null, results[random])
+      }
+    })
+  })
+}
+
 module.exports.getImageUrls = getImageUrls;
+module.exports.getRandomProduct = getRandomProduct;
 
 
 

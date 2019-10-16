@@ -1,5 +1,5 @@
 const express = require('express')
-const { getImageUrls } = require('../database/db.js')
+const { getImageUrls, getRandomProduct } = require('../database/db.js')
 const cors = require('cors');
 
 const app = express();
@@ -28,6 +28,17 @@ app.get('/urls', (req, res) => {
   })
 })
 
+app.get('/urls/random', (req, res) => {
+  getRandomProduct((err, urls) => {
+    if(err){
+      console.log(err)
+      res.sendStatus(404)
+    }else{
+      res.send(saveUrls([urls]));
+    }
+  })
+})
+
 const saveUrls = (urls) => {
   let images = urls[0].Images;
   const state = {}
@@ -41,7 +52,6 @@ const saveUrls = (urls) => {
     state.fiveSeventies.push(images[i].url_570xN);
     state.fulls.push(images[i].url_fullxfull);
   }
-  console.log(state);
   return state;
 }
 
