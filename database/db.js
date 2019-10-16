@@ -24,6 +24,7 @@ const getImageUrls = (productId, callback) => {
     if(err){
       callback(err, null);
     }else{
+      // console.log('database results ------',results)
       callback(null, results);
     }
   })
