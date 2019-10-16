@@ -18,6 +18,13 @@ module.exports = {
         "used_manufacturer": false,
         "sku": [],
         "is_vintage": true,
+        "product_options": [
+            {
+                title: "Style",
+                description_1: "standard",
+                description_2: "black",
+            },
+        ],
         "Images": [
             {
                 "listing_image_id": 540562651,
@@ -32,10 +39,10 @@ module.exports = {
                 "creation_tsz": 1387127397,
                 "listing_id": 173033626,
                 "rank": 1,
-                "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_75x75.540562651_dek1.jpg",
-                "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_170x135.540562651_dek1.jpg",
-                "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_570xN.540562651_dek1.jpg",
-                "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_fullxfull.540562651_dek1.jpg",
+                "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_75x75.540562651_dek1.jpg",
+                "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_170x135.540562651_dek1.jpg",
+                "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_570xN.540562651_dek1.jpg",
+                "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_fullxfull.540562651_dek1.jpg",
                 "full_height": 1500,
                 "full_width": 1125
             },
@@ -52,10 +59,10 @@ module.exports = {
                 "creation_tsz": 1387127397,
                 "listing_id": 173033626,
                 "rank": 2,
-                "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_75x75.540471528_6go6.jpg",
-                "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_170x135.540471528_6go6.jpg",
-                "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_570xN.540471528_6go6.jpg",
-                "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_fullxfull.540471528_6go6.jpg",
+                "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_75x75.540471528_6go6.jpg",
+                "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_170x135.540471528_6go6.jpg",
+                "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_570xN.540471528_6go6.jpg",
+                "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_fullxfull.540471528_6go6.jpg",
                 "full_height": 1125,
                 "full_width": 1500
             },
@@ -72,10 +79,10 @@ module.exports = {
                 "creation_tsz": 1387127397,
                 "listing_id": 173033626,
                 "rank": 3,
-                "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_75x75.540562665_adxn.jpg",
-                "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_170x135.540562665_adxn.jpg",
-                "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_570xN.540562665_adxn.jpg",
-                "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_fullxfull.540562665_adxn.jpg",
+                "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_75x75.540562665_adxn.jpg",
+                "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_170x135.540562665_adxn.jpg",
+                "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_570xN.540562665_adxn.jpg",
+                "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_fullxfull.540562665_adxn.jpg",
                 "full_height": 1500,
                 "full_width": 1125
             },
@@ -92,10 +99,10 @@ module.exports = {
                 "creation_tsz": 1387127397,
                 "listing_id": 173033626,
                 "rank": 4,
-                "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_75x75.540562663_pqgm.jpg",
-                "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_170x135.540562663_pqgm.jpg",
-                "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_570xN.540562663_pqgm.jpg",
-                "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_fullxfull.540562663_pqgm.jpg",
+                "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_75x75.540562663_pqgm.jpg",
+                "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_170x135.540562663_pqgm.jpg",
+                "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_570xN.540562663_pqgm.jpg",
+                "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_fullxfull.540562663_pqgm.jpg",
                 "full_height": 1125,
                 "full_width": 1500
             },
@@ -112,10 +119,10 @@ module.exports = {
                 "creation_tsz": 1387127397,
                 "listing_id": 173033626,
                 "rank": 5,
-                "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_75x75.540471532_kgv5.jpg",
-                "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_170x135.540471532_kgv5.jpg",
-                "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_570xN.540471532_kgv5.jpg",
-                "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_fullxfull.540471532_kgv5.jpg",
+                "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_75x75.540471532_kgv5.jpg",
+                "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_170x135.540471532_kgv5.jpg",
+                "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_570xN.540471532_kgv5.jpg",
+                "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_fullxfull.540471532_kgv5.jpg",
                 "full_height": 1125,
                 "full_width": 1500
             }
@@ -184,6 +191,7 @@ module.exports = {
         "used_manufacturer": false,
         "sku": [],
         "is_vintage": false,
+        "product_options": null,
         "Images": [
             {
                 "listing_image_id": 2038832488,
@@ -269,6 +277,15 @@ module.exports = {
         "used_manufacturer": false,
         "sku": [],
         "is_vintage": false,
+        "product_options": [
+            {
+                title: "Metal",
+                description_1: "Stainless Steel",
+                description_2: "Silver + $20",
+                description_3: "Brass",
+                description_4: "Gold + $50",
+            },
+        ],
         "Images": [
             {
                 "listing_image_id": 1892274526,
@@ -375,6 +392,14 @@ module.exports = {
         "used_manufacturer": false,
         "sku": [],
         "is_vintage": true,
+        "product_options": [
+            {
+                title: "Gold",
+                description_1: "Standard",
+                description_2: "Rose Gold",
+                description_3: "White Gold",
+            },
+        ],
         "Images": [
             {
                 "listing_image_id": 2038811298,
@@ -540,7 +565,20 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": [
+            {
+                title: "Charm",
+                description_1: "Tahoe Lake Pendant",
+                description_2: "Lake Tahoe Charm",
+                description_3: "Tahoe Heart Pendant",
+            },
+            {
+              title: "Metal",
+              description_1: "Sterling Silver",
+              description_2: "White Gold + $20",
+          },
+        ],         "Images": [
               {
                   "listing_image_id": 1885262780,
                   "hex_code": "82B2B9",
@@ -686,7 +724,9 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": null,
+        "Images": [
               {
                   "listing_image_id": 1091843684,
                   "hex_code": "67564F",
@@ -832,7 +872,9 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": null,
+        "Images": [
               {
                   "listing_image_id": 1528376771,
                   "hex_code": "CCCBCB",
@@ -1025,7 +1067,9 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": null,
+        "Images": [
               {
                   "listing_image_id": 2086439571,
                   "hex_code": null,
@@ -1170,7 +1214,28 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": [
+            {
+                title: "Small Sizes",
+                description_1: "5",
+                description_2: "6",
+                description_3: "7",
+            },
+            {
+              title: "Medium Sizes",
+              description_1: "8",
+              description_2: "9",
+              description_3: "10",
+            },
+            {
+              title: "Large Sizes",
+              description_1: "11",
+              description_2: "12",
+              description_3: "13",
+            },
+        ],         
+        "Images": [
               {
                   "listing_image_id": 1488622848,
                   "hex_code": "6E6A5E",
@@ -1296,7 +1361,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": [
+            {
+                title: "Size",
+                description_1: "One size fits most",
+            },
+        ],         
+        "Images": [
               {
                   "listing_image_id": 2086442739,
                   "hex_code": null,
@@ -1381,7 +1453,9 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": null,
+        "Images": [
               {
                   "listing_image_id": 1989938865,
                   "hex_code": "997467",
@@ -1636,7 +1710,7 @@ module.exports = {
       {
           "listing_id": 674621429,
           "title": "4 x Crystals For Twin Flames/Soul Mates Labradorite, Unakite, Snow Quartz, Aventurine  Tumblestones Stones Healing Energy Romance Empaths",
-          "description": "4x crystals known to support twin flame/soul mate connections, comes with information card and pouch.\n\nLabradorite ~ Known as the stone of “magic”. This stone is \nused to enhance intuition, increase psychic abilities and \nfor awakening and heightened conscious awareness. \nIt is believed this stone offers spiritual guidance and helps\nretrieve ancient memories and delivers answers and insights. \nIt is thought that this stone helps with astral travel and \nassists telepathic communication with loved ones. \n\nUnakite ~ Known to be powerful, passionate and gentle \nand is one of the most popular stones used for opening the \nheart chakra and assisting with unconditional love. It is \ncommonly used to help with the reunion of estranged\nlovers and also promotes healthy, loving communication. \n\nSnow Quartz ~ Known for its soft and balanced feminine \nenergy and promotes mutual and healthy romantic \nconnections. It is a healing, compassionate stone, used for \nclearing past pain so that the heart chakra is flowing \nfreely and new love can enter and be sustained. \n\nAventurine ~ Known to balance masculine and feminine\nenergies so that love can blossom in harmony and peace.\nIt is a soothing, calming and protective crystal that \nencourages openness and healthy, respectful relationships. \nIt is also used for manifesting, as it is known to help\nto attract meaningful, soulful connections. \n\nNote: Crystology does not substitute medical advice. Please see a medical professional for any health concerns.",
+          "description": "4x crystals known to support twin flame/soul mate connections, comes with information card and pouch.\n\nLabradorite ~ Known as the stone of 'magic'. This stone is \nused to enhance intuition, increase psychic abilities and \nfor awakening and heightened conscious awareness. \nIt is believed this stone offers spiritual guidance and helps\nretrieve ancient memories and delivers answers and insights. \nIt is thought that this stone helps with astral travel and \nassists telepathic communication with loved ones. \n\nUnakite ~ Known to be powerful, passionate and gentle \nand is one of the most popular stones used for opening the \nheart chakra and assisting with unconditional love. It is \ncommonly used to help with the reunion of estranged\nlovers and also promotes healthy, loving communication. \n\nSnow Quartz ~ Known for its soft and balanced feminine \nenergy and promotes mutual and healthy romantic \nconnections. It is a healing, compassionate stone, used for \nclearing past pain so that the heart chakra is flowing \nfreely and new love can enter and be sustained. \n\nAventurine ~ Known to balance masculine and feminine\nenergies so that love can blossom in harmony and peace.\nIt is a soothing, calming and protective crystal that \nencourages openness and healthy, respectful relationships. \nIt is also used for manifesting, as it is known to help\nto attract meaningful, soulful connections. \n\nNote: Crystology does not substitute medical advice. Please see a medical professional for any health concerns.",
           "price": "6.00",
           "category_path": [
               "Jewelry"
@@ -1648,7 +1722,9 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": null,
+        "Images": [
               {
                   "listing_image_id": 1744082098,
                   "hex_code": "858886",
@@ -1755,7 +1831,13 @@ module.exports = {
               "S49B9-01"
           ],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": [
+            {
+                title: "Measurements",
+                description_1: "approx: 29x25mm - 41x32mm",
+            },
+        ],         "Images": [
               {
                   "listing_image_id": 1924789421,
                   "hex_code": "63606F",
@@ -1838,7 +1920,7 @@ module.exports = {
               "policy_payment": "SECURE OPTIONS\nEtsy keeps your payment information secure. Sellers don't receive your credit card information.\n- Visa\n- MasterCard\n- American Express\n- Discover\n- PayPal\n- Apple Pay\n- SOFORT Bank Transfer\n- iDEAL\n- Etsy Gift Card",
               "policy_shipping": "PROCESSING TIME\nThe time I need to prepare an order for shipping varies. For details, see individual items.\n\nCUSTOMS AND DUTIES FEES\nBuyers are responsible for any customs or duties fees that may apply. Sellers aren't responsible for delays due to customs",
               "policy_refunds": "I GLADLY ACCEPT RETURNS\nJust contact me within: 7 days of delivery\nShip returns back to me within: 30 days of delivery\n\nI DON'T ACCEPT EXCHANGES OR CANCELLATIONS\nBut please contact me if you have any problems with your order.\n\nTHE FOLLOWING ITEMS CAN'T BE RETURNED\nBecause of the nature of these items, unless they arrive damaged or defective, I can't accept returns for:\n- Custom or personalized orders\n- Intimate items (for health/hygiene reasons)\n\nCONDITIONS OF RETURN\nBuyers are responsible for return shipping costs.\nIf the item is not returned in its original condition, the buyer is responsible for any loss in value.",
-              "policy_additional": "- This Privacy Policy describes how and when I collect, use, and share information when you purchase an item from me, contact me, or otherwise use my services through Etsy.com or its related sites and services.\n\nThis Privacy Policy does not apply to the practices of third parties that I do not own or control, including Etsy or any third party services you access through Etsy. You can reference the Etsy Privacy Policy to learn more about its privacy practices. \n\nInformation I Collect\n\nTo fulfil your order, you must provide me with certain information (which you authorized Etsy to provide to me), such as your name, email address, postal address, payment information, and the details of the product that you’re ordering. You may also choose to provide me with additional personal information (for a custom order of jewelry, for example), if you contact me directly.\n\nWhy I Need Your Information and How I Use It\n\nI rely on a number of legal bases to collect, use, and share your information, including:\n\nas needed to provide my services, such as when I use your information to fulfil your order, to settle disputes, or to provide customer support;\nwhen you have provided your affirmative consent, which you may revoke at any time, such as by signing up for my mailing list;\nif necessary to comply with a legal obligation or court order or in connection with a legal claim, such as retaining information about your purchases if required by tax law; and\nas necessary for the purpose of my legitimate interests, if those legitimate interests are not overridden by your rights or interests, such as 1) providing and improving my services. I use your information to provide the services you requested and in my legitimate interest toimprove my services; and 2) Compliance with the Etsy Seller Policy and Terms of Use. I use your information as necessary to comply with my obligations under the Etsy Seller Policy and Terms of Use.\n\nInformation Sharing and Disclosure\n\nInformation about my customers is important to my business. I share your personal information for very limited reasons and in limited circumstances, as follows:\n\nEtsy. I share information with Etsy as necessary to provide you my services and comply with my obligations under both the Etsy Seller Policy and Etsy Terms of Use.\nService providers. I engage certain trusted third parties to perform functions and provide services to my shop, such as delivery companies. I will share your personal information with these third parties, but only to the extent necessary to perform these services.\nBusiness transfers. If I sell or merge my business, I may disclose your information as part of that transaction, only to the extent permitted by law.\nCompliance with laws. I may collect, use, retain, and share your information if I have a good faith belief that it is reasonably necessary to: (a) respond to legal process or to government requests; (b) enforce my agreements, terms and policies; (c) prevent, investigate, and address fraud and other illegal activity, security, or technical issues; or (d) protect the rights, property, and safety of my customers, or others.\n\n\nData Retention\n\nI retain your personal information only for as long as necessary to provide you with my services and as described in my Privacy Policy. However, I may also be required to retain this information to comply with my legal and regulatory obligations, to resolve disputes, and to enforce my agreements. I generally keep your data for the following time period: 4 years.\n\n\nTransfers of Personal Information Outside the EU\n\nI may store and process your information through third-party hosting services in the US and other jurisdictions. As a result, I may transfer your personal information to a jurisdiction with different data protection and government surveillance laws than your jurisdiction. If I am deemed to transfer information about you outside of the EU, I rely on Privacy Shield as the legal basis for the transfer,\n\n\n\nYour Rights\n\nIf you reside in certain territories, including the EU, you have a number of rights in relation to your personal information. While some of these rights apply generally, certain rights apply only in certain limited cases. I describe these rights below:\n\nAccess. You may have the right to access and receive a copy of the personal information I hold about you by contacting me using the contact information below.\nChange, restrict, delete. You may also have rights to change, restrict my use of, or delete your personal information. Absent exceptional circumstances (like where I am required to store data for legal reasons) I will generally delete your personal information upon request.\nObject. You can object to (i) my processing of some of your information based on my legitimate interests and (ii) receiving marketing messages from me after providing your express consent to receive them. In such cases, I will delete your personal information unless I have compelling and legitimate grounds to continue using that information or if it is needed for legal reasons.\nComplain. If you reside in the EU and wish to raise a concern about my use of your information (and without prejudice to any other rights you may have), you have the right to do so with your local data protection authority.\nHow to Contact Me\n\nFor purposes of EU data protection law, Rock Paradise, LLC, am the data controller of your personal information. If you have any questions or concerns, you may contact me at sales@rockparadise.com . Alternately, you may mail me at:\n\nRock Paradise\n6520 Platt Street #752\nWest Hills Ca 91307\n\n*If a customer contacts you to access, correct or delete personal information held by Etsy, you may contact Etsy at Etsy.com/help for assistance, or request that the customer send a request directly to Etsy.\n\nABOUT US\nWelcome to Jewelers Paradise! I have enjoyed making jewelry for over half my life now. I was a special education teacher in my past career and when I resigned I decided to pursue my passion for design.\n\nJewelers Paradise started 5 years ago as a small shop. We now have a 5000 foot warehouse filled with amazing electroformed pendants, bezels, chain, findings, and all other items you need to make your jewelry creations stand out!\n\nWe have a great assortment of unique designs, many which are not available anywhere else in the market. If your looking for something special and unique you can find it in our shop and if not let us know. We are able to produce custom designs and do a lot of private label work.\n\nCUSTOM AND PERSONALIZED ORDERS\nYes! We can help you manufacturer almost any jewelry item.  You can order custom design chain, bezel, finished jewelry, pendants, and so much more.  If you need custom cut stones, items plated, or any type of custom jewelry please message us.  For some items we require a minimum for custom work, but it depends on the item so please ask.\n\nWHOLESALE AVAILABILITY\nWe stock a huge volume of most items in our shop.  Message us for wholesale pricing details.  We are a reliable source and can help you with any of your jewelry needs with quick turnaround time.\n\nHOW FAST DO YOU SHIP ORDERS?\nWe ship items on a daily basis M-F, excluding holidays.\nItems are shipped in the order received, and due to a high volume of sales are taking 2-5 days to process, excluding weekends. If your in a rush please upgrade to express or priority at checkout.  We ship those out first on a daily basis.  Priority and Express orders must be received by 12pm PST to be processed the same day.  Please be advised that USPS has changed Express to 1-2 days guaranteed, so we cannot promise it will arrive next day.  For urgent orders contact us and we can also send you a link for UPS shipping.\nThe following are approximate delivery times once order is processed\nFirst Class Mail Domestic 2-5 Days\nPriority Domestic 2-3 Days\nExpress Domestic 1-2 Days\n\nINTERNATIONAL SHIPPING INFORMATION\nInternational orders are shipped first class mail for most countries.  A few countries must ship express mail as it is the only safe way to get your package to you with tracking.\n\nAll international orders over 150 usd must upgrade to Express or Priority mail.  Etsy does not calculate this automatically.  We will contact you after purchase for additional shipping charges.  It is the safest way to get your package to you with tracking.  We will also need your phone number to include on the package.\n\nInternational Shipping time \nFirst class 1-5 weeks depending on Country\nPriority 1-2 weeks\nExpress 7-10 days\n\nIf you prefer UPS, please contact us for rates.\n\nWHAT IS YOUR RETURN POLICY?\nPlease shop with confidence. Satisfaction is guaranteed. If you are unhappy for any reason please contact us within 7 days and return the item within 30 days. We will issue a full refund minus shipping. no returns past 30 days.\nAll cut chain/cord sales are final.\nAll custom made orders are final.\nCut bead strands may not be returned or exchanged\nWe also have a few listings for &quot;AS IS&quot; those are reduced to lowest prices, and final sales.\nIf you would like to exchange an item, that is not damaged we will issue a refund and ask you to purchase the item again as we cannot be responsible for return shipping.\nReturns on custom discount listings are subject to a 10% restocking fee.\nWe reserve the right to charge 10% restocking on any returns.\n\nCAN WE SHOP IN PERSON?\nYes! We have a warehouse open for wholesale only in Canoga Park, California.  For more information please contact us.\n\nDO YOU HAVE A MAILING LIST?\nYes, we run special sales and promotions,  to stay up to date sign up for our mailing list at jewelersparadise.com\n\nOTHER IMPORTANT INFORMATION\nDisclaimers:\nOur electroplated gold (layered/dipped/edged) items are made with a layer of copper, then nickel, and finally a layer of gold or silver. If you are sensitive to plated jewelry in general please do not purchase.\n\nAttention California Customers: \nProposition 65 (safe drinking and toxic enforcement Act of 1986) California Health and Safety Code 25249.5-25249.13\nSome Jewelry items may contain lead and lead compounds. Lead and compounds are chemicals known to the state of California to cause cancer, birth defectives or other reproductive harm.\nAll items are not intended for children 14 and under.\n\nAll content on Jewelersparadise.etsy.com , such as images and text are the property of Jewelers Paradise or its content suppliers and pro\n\nBLACK FRIDAY\nI purchased before the sale.  Will you refund me the difference? NO sorry.  The discount only applies to purchases made during the sale.  No cancellations will be accepted so you can repurchase.  Please be fair.  Thank you",
+              "policy_additional": "- This Privacy Policy describes how and when I collect, use, and share information when you purchase an item from me, contact me, or otherwise use my services through Etsy.com or its related sites and services.\n\nThis Privacy Policy does not apply to the practices of third parties that I do not own or control, including Etsy or any third party services you access through Etsy. You can reference the Etsy Privacy Policy to learn more about its privacy practices. \n\nInformation I Collect\n\nTo fulfil your order, you must provide me with certain information (which you authorized Etsy to provide to me), such as your name, email address, postal address, payment information, and the details of the product that you're ordering. You may also choose to provide me with additional personal information (for a custom order of jewelry, for example), if you contact me directly.\n\nWhy I Need Your Information and How I Use It\n\nI rely on a number of legal bases to collect, use, and share your information, including:\n\nas needed to provide my services, such as when I use your information to fulfil your order, to settle disputes, or to provide customer support;\nwhen you have provided your affirmative consent, which you may revoke at any time, such as by signing up for my mailing list;\nif necessary to comply with a legal obligation or court order or in connection with a legal claim, such as retaining information about your purchases if required by tax law; and\nas necessary for the purpose of my legitimate interests, if those legitimate interests are not overridden by your rights or interests, such as 1) providing and improving my services. I use your information to provide the services you requested and in my legitimate interest toimprove my services; and 2) Compliance with the Etsy Seller Policy and Terms of Use. I use your information as necessary to comply with my obligations under the Etsy Seller Policy and Terms of Use.\n\nInformation Sharing and Disclosure\n\nInformation about my customers is important to my business. I share your personal information for very limited reasons and in limited circumstances, as follows:\n\nEtsy. I share information with Etsy as necessary to provide you my services and comply with my obligations under both the Etsy Seller Policy and Etsy Terms of Use.\nService providers. I engage certain trusted third parties to perform functions and provide services to my shop, such as delivery companies. I will share your personal information with these third parties, but only to the extent necessary to perform these services.\nBusiness transfers. If I sell or merge my business, I may disclose your information as part of that transaction, only to the extent permitted by law.\nCompliance with laws. I may collect, use, retain, and share your information if I have a good faith belief that it is reasonably necessary to: (a) respond to legal process or to government requests; (b) enforce my agreements, terms and policies; (c) prevent, investigate, and address fraud and other illegal activity, security, or technical issues; or (d) protect the rights, property, and safety of my customers, or others.\n\n\nData Retention\n\nI retain your personal information only for as long as necessary to provide you with my services and as described in my Privacy Policy. However, I may also be required to retain this information to comply with my legal and regulatory obligations, to resolve disputes, and to enforce my agreements. I generally keep your data for the following time period: 4 years.\n\n\nTransfers of Personal Information Outside the EU\n\nI may store and process your information through third-party hosting services in the US and other jurisdictions. As a result, I may transfer your personal information to a jurisdiction with different data protection and government surveillance laws than your jurisdiction. If I am deemed to transfer information about you outside of the EU, I rely on Privacy Shield as the legal basis for the transfer,\n\n\n\nYour Rights\n\nIf you reside in certain territories, including the EU, you have a number of rights in relation to your personal information. While some of these rights apply generally, certain rights apply only in certain limited cases. I describe these rights below:\n\nAccess. You may have the right to access and receive a copy of the personal information I hold about you by contacting me using the contact information below.\nChange, restrict, delete. You may also have rights to change, restrict my use of, or delete your personal information. Absent exceptional circumstances (like where I am required to store data for legal reasons) I will generally delete your personal information upon request.\nObject. You can object to (i) my processing of some of your information based on my legitimate interests and (ii) receiving marketing messages from me after providing your express consent to receive them. In such cases, I will delete your personal information unless I have compelling and legitimate grounds to continue using that information or if it is needed for legal reasons.\nComplain. If you reside in the EU and wish to raise a concern about my use of your information (and without prejudice to any other rights you may have), you have the right to do so with your local data protection authority.\nHow to Contact Me\n\nFor purposes of EU data protection law, Rock Paradise, LLC, am the data controller of your personal information. If you have any questions or concerns, you may contact me at sales@rockparadise.com . Alternately, you may mail me at:\n\nRock Paradise\n6520 Platt Street #752\nWest Hills Ca 91307\n\n*If a customer contacts you to access, correct or delete personal information held by Etsy, you may contact Etsy at Etsy.com/help for assistance, or request that the customer send a request directly to Etsy.\n\nABOUT US\nWelcome to Jewelers Paradise! I have enjoyed making jewelry for over half my life now. I was a special education teacher in my past career and when I resigned I decided to pursue my passion for design.\n\nJewelers Paradise started 5 years ago as a small shop. We now have a 5000 foot warehouse filled with amazing electroformed pendants, bezels, chain, findings, and all other items you need to make your jewelry creations stand out!\n\nWe have a great assortment of unique designs, many which are not available anywhere else in the market. If your looking for something special and unique you can find it in our shop and if not let us know. We are able to produce custom designs and do a lot of private label work.\n\nCUSTOM AND PERSONALIZED ORDERS\nYes! We can help you manufacturer almost any jewelry item.  You can order custom design chain, bezel, finished jewelry, pendants, and so much more.  If you need custom cut stones, items plated, or any type of custom jewelry please message us.  For some items we require a minimum for custom work, but it depends on the item so please ask.\n\nWHOLESALE AVAILABILITY\nWe stock a huge volume of most items in our shop.  Message us for wholesale pricing details.  We are a reliable source and can help you with any of your jewelry needs with quick turnaround time.\n\nHOW FAST DO YOU SHIP ORDERS?\nWe ship items on a daily basis M-F, excluding holidays.\nItems are shipped in the order received, and due to a high volume of sales are taking 2-5 days to process, excluding weekends. If your in a rush please upgrade to express or priority at checkout.  We ship those out first on a daily basis.  Priority and Express orders must be received by 12pm PST to be processed the same day.  Please be advised that USPS has changed Express to 1-2 days guaranteed, so we cannot promise it will arrive next day.  For urgent orders contact us and we can also send you a link for UPS shipping.\nThe following are approximate delivery times once order is processed\nFirst Class Mail Domestic 2-5 Days\nPriority Domestic 2-3 Days\nExpress Domestic 1-2 Days\n\nINTERNATIONAL SHIPPING INFORMATION\nInternational orders are shipped first class mail for most countries.  A few countries must ship express mail as it is the only safe way to get your package to you with tracking.\n\nAll international orders over 150 usd must upgrade to Express or Priority mail.  Etsy does not calculate this automatically.  We will contact you after purchase for additional shipping charges.  It is the safest way to get your package to you with tracking.  We will also need your phone number to include on the package.\n\nInternational Shipping time \nFirst class 1-5 weeks depending on Country\nPriority 1-2 weeks\nExpress 7-10 days\n\nIf you prefer UPS, please contact us for rates.\n\nWHAT IS YOUR RETURN POLICY?\nPlease shop with confidence. Satisfaction is guaranteed. If you are unhappy for any reason please contact us within 7 days and return the item within 30 days. We will issue a full refund minus shipping. no returns past 30 days.\nAll cut chain/cord sales are final.\nAll custom made orders are final.\nCut bead strands may not be returned or exchanged\nWe also have a few listings for &quot;AS IS&quot; those are reduced to lowest prices, and final sales.\nIf you would like to exchange an item, that is not damaged we will issue a refund and ask you to purchase the item again as we cannot be responsible for return shipping.\nReturns on custom discount listings are subject to a 10% restocking fee.\nWe reserve the right to charge 10% restocking on any returns.\n\nCAN WE SHOP IN PERSON?\nYes! We have a warehouse open for wholesale only in Canoga Park, California.  For more information please contact us.\n\nDO YOU HAVE A MAILING LIST?\nYes, we run special sales and promotions,  to stay up to date sign up for our mailing list at jewelersparadise.com\n\nOTHER IMPORTANT INFORMATION\nDisclaimers:\nOur electroplated gold (layered/dipped/edged) items are made with a layer of copper, then nickel, and finally a layer of gold or silver. If you are sensitive to plated jewelry in general please do not purchase.\n\nAttention California Customers: \nProposition 65 (safe drinking and toxic enforcement Act of 1986) California Health and Safety Code 25249.5-25249.13\nSome Jewelry items may contain lead and lead compounds. Lead and compounds are chemicals known to the state of California to cause cancer, birth defectives or other reproductive harm.\nAll items are not intended for children 14 and under.\n\nAll content on Jewelersparadise.etsy.com , such as images and text are the property of Jewelers Paradise or its content suppliers and pro\n\nBLACK FRIDAY\nI purchased before the sale.  Will you refund me the difference? NO sorry.  The discount only applies to purchases made during the sale.  No cancellations will be accepted so you can repurchase.  Please be fair.  Thank you",
               "policy_seller_info": "",
               "policy_updated_tsz": 1458806855,
               "policy_has_private_receipt_info": true,
@@ -1857,7 +1939,7 @@ module.exports = {
               "custom_shops_state": 3,
               "include_dispute_form_link": false,
               "is_direct_checkout_onboarded": true,
-              "policy_privacy": "This Privacy Policy describes how and when I collect, use, and share information when you purchase an item from me, contact me, or otherwise use my services through Etsy.com or its related sites and services.\n\nThis Privacy Policy does not apply to the practices of third parties that I do not own or control, including Etsy or any third party services you access through Etsy. You can reference the Etsy Privacy Policy to learn more about its privacy practices. \n\nInformation I Collect\n\nTo fulfil your order, you must provide me with certain information (which you authorized Etsy to provide to me), such as your name, email address, postal address, payment information, and the details of the product that you’re ordering. You may also choose to provide me with additional personal information (for a custom order of jewelry, for example), if you contact me directly.\n\nWhy I Need Your Information and How I Use It\n\nI rely on a number of legal bases to collect, use, and share your information, including:\n\nas needed to provide my services, such as when I use your information to fulfil your order, to settle disputes, or to provide customer support;\nwhen you have provided your affirmative consent, which you may revoke at any time, such as by signing up for my mailing list;\nif necessary to comply with a legal obligation or court order or in connection with a legal claim, such as retaining information about your purchases if required by tax law; and\nas necessary for the purpose of my legitimate interests, if those legitimate interests are not overridden by your rights or interests, such as 1) providing and improving my services. I use your information to provide the services you requested and in my legitimate interest toimprove my services; and 2) Compliance with the Etsy Seller Policy and Terms of Use. I use your information as necessary to comply with my obligations under the Etsy Seller Policy and Terms of Use.\n\nInformation Sharing and Disclosure\n\nInformation about my customers is important to my business. I share your personal information for very limited reasons and in limited circumstances, as follows:\n\nEtsy. I share information with Etsy as necessary to provide you my services and comply with my obligations under both the Etsy Seller Policy and Etsy Terms of Use.\nService providers. I engage certain trusted third parties to perform functions and provide services to my shop, such as delivery companies. I will share your personal information with these third parties, but only to the extent necessary to perform these services.\nBusiness transfers. If I sell or merge my business, I may disclose your information as part of that transaction, only to the extent permitted by law.\nCompliance with laws. I may collect, use, retain, and share your information if I have a good faith belief that it is reasonably necessary to: (a) respond to legal process or to government requests; (b) enforce my agreements, terms and policies; (c) prevent, investigate, and address fraud and other illegal activity, security, or technical issues; or (d) protect the rights, property, and safety of my customers, or others.\n\n\nData Retention\n\nI retain your personal information only for as long as necessary to provide you with my services and as described in my Privacy Policy. However, I may also be required to retain this information to comply with my legal and regulatory obligations, to resolve disputes, and to enforce my agreements. I generally keep your data for the following time period: 4 years.\n\n\nTransfers of Personal Information Outside the EU\n\nI may store and process your information through third-party hosting services in the US and other jurisdictions. As a result, I may transfer your personal information to a jurisdiction with different data protection and government surveillance laws than your jurisdiction. If I am deemed to transfer information about you outside of the EU, I rely on Privacy Shield as the legal basis for the transfer,\n\n\n\nYour Rights\n\nIf you reside in certain territories, including the EU, you have a number of rights in relation to your personal information. While some of these rights apply generally, certain rights apply only in certain limited cases. I describe these rights below:\n\nAccess. You may have the right to access and receive a copy of the personal information I hold about you by contacting me using the contact information below.\nChange, restrict, delete. You may also have rights to change, restrict my use of, or delete your personal information. Absent exceptional circumstances (like where I am required to store data for legal reasons) I will generally delete your personal information upon request.\nObject. You can object to (i) my processing of some of your information based on my legitimate interests and (ii) receiving marketing messages from me after providing your express consent to receive them. In such cases, I will delete your personal information unless I have compelling and legitimate grounds to continue using that information or if it is needed for legal reasons.\nComplain. If you reside in the EU and wish to raise a concern about my use of your information (and without prejudice to any other rights you may have), you have the right to do so with your local data protection authority.\nHow to Contact Me\n\nFor purposes of EU data protection law, Rock Paradise, LLC, am the data controller of your personal information. If you have any questions or concerns, you may contact me at sales@rockparadise.com . Alternately, you may mail me at:\n\nRock Paradise\n6520 Platt Street #752\nWest Hills Ca 91307\n\n*If a customer contacts you to access, correct or delete personal information held by Etsy, you may contact Etsy at Etsy.com/help for assistance, or request that the customer send a request directly to Etsy.",
+              "policy_privacy": "This Privacy Policy describes how and when I collect, use, and share information when you purchase an item from me, contact me, or otherwise use my services through Etsy.com or its related sites and services.\n\nThis Privacy Policy does not apply to the practices of third parties that I do not own or control, including Etsy or any third party services you access through Etsy. You can reference the Etsy Privacy Policy to learn more about its privacy practices. \n\nInformation I Collect\n\nTo fulfil your order, you must provide me with certain information (which you authorized Etsy to provide to me), such as your name, email address, postal address, payment information, and the details of the product that you're ordering. You may also choose to provide me with additional personal information (for a custom order of jewelry, for example), if you contact me directly.\n\nWhy I Need Your Information and How I Use It\n\nI rely on a number of legal bases to collect, use, and share your information, including:\n\nas needed to provide my services, such as when I use your information to fulfil your order, to settle disputes, or to provide customer support;\nwhen you have provided your affirmative consent, which you may revoke at any time, such as by signing up for my mailing list;\nif necessary to comply with a legal obligation or court order or in connection with a legal claim, such as retaining information about your purchases if required by tax law; and\nas necessary for the purpose of my legitimate interests, if those legitimate interests are not overridden by your rights or interests, such as 1) providing and improving my services. I use your information to provide the services you requested and in my legitimate interest toimprove my services; and 2) Compliance with the Etsy Seller Policy and Terms of Use. I use your information as necessary to comply with my obligations under the Etsy Seller Policy and Terms of Use.\n\nInformation Sharing and Disclosure\n\nInformation about my customers is important to my business. I share your personal information for very limited reasons and in limited circumstances, as follows:\n\nEtsy. I share information with Etsy as necessary to provide you my services and comply with my obligations under both the Etsy Seller Policy and Etsy Terms of Use.\nService providers. I engage certain trusted third parties to perform functions and provide services to my shop, such as delivery companies. I will share your personal information with these third parties, but only to the extent necessary to perform these services.\nBusiness transfers. If I sell or merge my business, I may disclose your information as part of that transaction, only to the extent permitted by law.\nCompliance with laws. I may collect, use, retain, and share your information if I have a good faith belief that it is reasonably necessary to: (a) respond to legal process or to government requests; (b) enforce my agreements, terms and policies; (c) prevent, investigate, and address fraud and other illegal activity, security, or technical issues; or (d) protect the rights, property, and safety of my customers, or others.\n\n\nData Retention\n\nI retain your personal information only for as long as necessary to provide you with my services and as described in my Privacy Policy. However, I may also be required to retain this information to comply with my legal and regulatory obligations, to resolve disputes, and to enforce my agreements. I generally keep your data for the following time period: 4 years.\n\n\nTransfers of Personal Information Outside the EU\n\nI may store and process your information through third-party hosting services in the US and other jurisdictions. As a result, I may transfer your personal information to a jurisdiction with different data protection and government surveillance laws than your jurisdiction. If I am deemed to transfer information about you outside of the EU, I rely on Privacy Shield as the legal basis for the transfer,\n\n\n\nYour Rights\n\nIf you reside in certain territories, including the EU, you have a number of rights in relation to your personal information. While some of these rights apply generally, certain rights apply only in certain limited cases. I describe these rights below:\n\nAccess. You may have the right to access and receive a copy of the personal information I hold about you by contacting me using the contact information below.\nChange, restrict, delete. You may also have rights to change, restrict my use of, or delete your personal information. Absent exceptional circumstances (like where I am required to store data for legal reasons) I will generally delete your personal information upon request.\nObject. You can object to (i) my processing of some of your information based on my legitimate interests and (ii) receiving marketing messages from me after providing your express consent to receive them. In such cases, I will delete your personal information unless I have compelling and legitimate grounds to continue using that information or if it is needed for legal reasons.\nComplain. If you reside in the EU and wish to raise a concern about my use of your information (and without prejudice to any other rights you may have), you have the right to do so with your local data protection authority.\nHow to Contact Me\n\nFor purposes of EU data protection law, Rock Paradise, LLC, am the data controller of your personal information. If you have any questions or concerns, you may contact me at sales@rockparadise.com . Alternately, you may mail me at:\n\nRock Paradise\n6520 Platt Street #752\nWest Hills Ca 91307\n\n*If a customer contacts you to access, correct or delete personal information held by Etsy, you may contact Etsy at Etsy.com/help for assistance, or request that the customer send a request directly to Etsy.",
               "is_calculated_eligible": true,
               "is_opted_in_to_buyer_promise": true,
               "is_shop_us_based": true
@@ -1883,7 +1965,9 @@ module.exports = {
               "N031591"
           ],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": null,     
+        "Images": [
               {
                   "listing_image_id": 1597522372,
                   "hex_code": "F8F8F8",
@@ -2009,7 +2093,9 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": null,       
+        "Images": [
               {
                   "listing_image_id": 2038831650,
                   "hex_code": null,
@@ -2154,7 +2240,17 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": [
+            {
+                title: "Leather Color",
+                description_1: "Standard",
+                description_2: "Chocolate",
+                description_3: "Burgundy",
+                description_4: "Black",
+            },
+        ],         
+        "Images": [
               {
                   "listing_image_id": 1656099040,
                   "hex_code": "AF9578",
@@ -2319,7 +2415,9 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": null,      
+        "Images": [
               {
                   "listing_image_id": 2038831500,
                   "hex_code": null,
@@ -2405,7 +2503,17 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": [
+            {
+                title: "Style",
+                description_1: "10KT Solid",
+                description_2: "14KT Solid Gold",
+                description_3: "18KT Solid Gold",
+                description_4: "Platinum",
+            },
+        ],         
+        "Images": [
               {
                   "listing_image_id": 2038533328,
                   "hex_code": "B8B1AC",
@@ -2535,7 +2643,7 @@ module.exports = {
       {
           "listing_id": 508354965,
           "title": "Mens ring, Unique Mens ring, Men Wedding Band, Unique Men Ring, Mens wedding ring, Gift for men, Silver & Copper Ring, RS-1081",
-          "description": "A dual tone ring that is as striking as it is symbolic makes this silver copper piece the ultimate gift for him. The handcrafted textured details and exclusive black silver color make this wide ring the perfect wedding band for everyday use. At the center of the ring is a thin copper continuous strip emphasizing the infinite union this ring represents.\n\nThis piece is packed in a beautiful jewelry box, and is ready to be given as a meaningful gift.\n\nINFO\n◆ Sterling Silver and Copper\n◆ Sizes 4-16 (US)\n◆ Width: 8mm, also available as 6mm 7mm or 9mm\n◆ The beautiful copper detail has no direct contact with skin\n◆Thickness: 2.5mm approximately\n\n\nFor precise size\nI highly recommend you have your finger sized by reputable jeweler in your area.\nAnd let him know the ring width you&#39;re interested in.\nIf your ring width is 6 mm or wider, have use a wide band ring sizer.\n\n\n◆Engraving -\n I’d be happy to add a personal engraving. To make your unique ring even more special, please add the following item to your cart:  www.etsy.com/listing/507947456\n\n\nPlease note, the ring is handmade, the coating levels and texture marks can vary from one ring to the next.\n\n\n\n◆ FREE SHIPPING WORLDWIDE \nYou package will arrive approximately within 4-7 business days to most destinations.\nIf you wish to upgrade to express shipping at an extra cost, please do so by upgrading your shipping options at checkout ◆\n\nLooking for more men’s rings? http://etsy.me/2fT3XXs\n\nFor more handmade jewelry, please visit:  https://www.etsy.com/shop/AbiMJewelry \n\n◆ Have any questions? Please do not hesitate to contact me!\n\nThank you for visiting my shop,\nAbi",
+          "description": "A dual tone ring that is as striking as it is symbolic makes this silver copper piece the ultimate gift for him. The handcrafted textured details and exclusive black silver color make this wide ring the perfect wedding band for everyday use. At the center of the ring is a thin copper continuous strip emphasizing the infinite union this ring represents.\n\nThis piece is packed in a beautiful jewelry box, and is ready to be given as a meaningful gift.\n\nINFO\n◆ Sterling Silver and Copper\n◆ Sizes 8-16 (US)\n◆ Width: 8mm, also available as 6mm 7mm or 9mm\n◆ The beautiful copper detail has no direct contact with skin\n◆Thickness: 2.5mm approximately\n\n\nFor precise size\nI highly recommend you have your finger sized by reputable jeweler in your area.\nAnd let him know the ring width you&#39;re interested in.\nIf your ring width is 6 mm or wider, have use a wide band ring sizer.\n\n\n◆Engraving -\n I'd be happy to add a personal engraving. To make your unique ring even more special, please add the following item to your cart:  www.etsy.com/listing/507947456\n\n\nPlease note, the ring is handmade, the coating levels and texture marks can vary from one ring to the next.\n\n\n\n◆ FREE SHIPPING WORLDWIDE \nYou package will arrive approximately within 4-7 business days to most destinations.\nIf you wish to upgrade to express shipping at an extra cost, please do so by upgrading your shipping options at checkout ◆\n\nLooking for more men's rings? http://etsy.me/2fT3XXs\n\nFor more handmade jewelry, please visit:  https://www.etsy.com/shop/AbiMJewelry \n\n◆ Have any questions? Please do not hesitate to contact me!\n\nThank you for visiting my shop,\nAbi",
           "price": "240.00",
           "category_path": [
               "Jewelry",
@@ -2553,7 +2661,28 @@ module.exports = {
               "RS-1081"
           ],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": [
+          {
+            title: "Small Sizes",
+            description_1: "8",
+            description_2: "9",
+            description_3: "10",
+        },
+        {
+          title: "Medium Sizes",
+          description_1: "11",
+          description_2: "12",
+          description_3: "13",
+        },
+        {
+          title: "Large Sizes",
+          description_1: "14",
+          description_2: "15",
+          description_3: "16",
+        },
+        ],         
+        "Images": [
               {
                   "listing_image_id": 1143060830,
                   "hex_code": "776E61",
@@ -2764,7 +2893,7 @@ module.exports = {
       {
           "listing_id": 729513146,
           "title": "Royal Purple Orgonite ® Pendant -  Tear Drop - Droplet - Talisman  -  Orgone  - Energy Battery - EMF protection",
-          "description": "DS1066\n\n⍟ This device is hand made with pure love. \n⍟ These talismans are functional art // no two are alike!\n⍟ Listing is specifically for the talisman pictured. \n⍟ Comes with adjustable black cotton string. Can be worn short or long.\n\nThese devices are built as harmonization tools. These cannot - in any way - be programmed for low vibrational thought forms. It’s existence can only assist the collective rise to new heights. ‼️ This is important to consider when buying energy tools from ANYONE. Be sure you CONNECT to the creator to feel if they AUTHENTICALLY resonate with you. Let your intuition guide you. I INVITE you to ask questions and connect with me before purchasing. 💗\n\n✶ Special note about my work: I am simply a facilitator of crystals. Everything is made fluidly, similar to channeling art.  \nAll crystal know who they will be going home to. I intuit my work as the crystals communicate to you before you even receive your device. Each device will resonate a frequency to you and if you feel called to it, that is not by mistake. \n✶ Crystal technology // Orgone Pyramids designed with re-harmonizing frequencies, intentions and crystals to bring spiritual awareness, JOY, creativity and protection in your field. \n✶ All devices can be programmed (but function regardless of your belief system) - I suggest programming them to your specific callings (love, joy, prosperity, protection etc) as they work 10 fold with intention. You create your own reality, so take it upon yourself to manifest all that you are called to with focus, intention, feeling and action. \n✶ Each device is functional art sculptures. No two are alike!  If you are called towards crystal technology and orgone devices, I recommend doing your own research. Try googling Wilhelm Reich, Orgone Generators, Orgone Energy and Crystal Consciousness. I find that self-education on metaphysical / quantum technology is the best way to re-member the power within and without. \n✶ Each piece is created with quality crystals that were cleansed with tensor rings, re-harmonized with crystal bowls/tuning forks, smudged with Palo Santo, re-programmed under a vogel crystal light rack.\n✶ Made with love and cosmic light\n\n✶ healing crystals are spiritual allies to healing and are not meant as health care information or prescriptions ✶\n\nLICENSEE is a licensed distributor of Orgone Generator® and Orgonite® which are trademarks owned by Karl Hans Welz, the inventor of these devices and the brand Orgonite®, which is famous as one of the most high quality experimental energy substances available",
+          "description": "DS1066\n\n⍟ This device is hand made with pure love. \n⍟ These talismans are functional art // no two are alike!\n⍟ Listing is specifically for the talisman pictured. \n⍟ Comes with adjustable black cotton string. Can be worn short or long.\n\nThese devices are built as harmonization tools. These cannot - in any way - be programmed for low vibrational thought forms. It's existence can only assist the collective rise to new heights. ‼️ This is important to consider when buying energy tools from ANYONE. Be sure you CONNECT to the creator to feel if they AUTHENTICALLY resonate with you. Let your intuition guide you. I INVITE you to ask questions and connect with me before purchasing. 💗\n\n✶ Special note about my work: I am simply a facilitator of crystals. Everything is made fluidly, similar to channeling art.  \nAll crystal know who they will be going home to. I intuit my work as the crystals communicate to you before you even receive your device. Each device will resonate a frequency to you and if you feel called to it, that is not by mistake. \n✶ Crystal technology // Orgone Pyramids designed with re-harmonizing frequencies, intentions and crystals to bring spiritual awareness, JOY, creativity and protection in your field. \n✶ All devices can be programmed (but function regardless of your belief system) - I suggest programming them to your specific callings (love, joy, prosperity, protection etc) as they work 10 fold with intention. You create your own reality, so take it upon yourself to manifest all that you are called to with focus, intention, feeling and action. \n✶ Each device is functional art sculptures. No two are alike!  If you are called towards crystal technology and orgone devices, I recommend doing your own research. Try googling Wilhelm Reich, Orgone Generators, Orgone Energy and Crystal Consciousness. I find that self-education on metaphysical / quantum technology is the best way to re-member the power within and without. \n✶ Each piece is created with quality crystals that were cleansed with tensor rings, re-harmonized with crystal bowls/tuning forks, smudged with Palo Santo, re-programmed under a vogel crystal light rack.\n✶ Made with love and cosmic light\n\n✶ healing crystals are spiritual allies to healing and are not meant as health care information or prescriptions ✶\n\nLICENSEE is a licensed distributor of Orgone Generator® and Orgonite® which are trademarks owned by Karl Hans Welz, the inventor of these devices and the brand Orgonite®, which is famous as one of the most high quality experimental energy substances available",
           "price": "24.00",
           "category_path": [
               "Jewelry",
@@ -2781,7 +2910,9 @@ module.exports = {
               "DS1066"
           ],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": null,
+        "Images": [
               {
                   "listing_image_id": 2086442993,
                   "hex_code": "85809F",
@@ -2929,7 +3060,7 @@ module.exports = {
               "user_id": 9075899,
               "creation_tsz": 1483641674,
               "title": "Handmade Orgonite ||  Energy Tools || Custom Art Tek",
-              "announcement": "Anything eye ever do is geared towards the evolution and vibrational elevation of the COSMOS. Grow with me...\n\nSimilar to #Orgonite but not to be compared! This is GODDESS TECHNOLOGY to help assist those who are called to them. Eye am here taking BACK MY technology and rebalancing the collective with harmonization devices.\nThese devices circulate stagnant energy in your auric field. Essentially assisting you by moving energy that blocks you from ultimate joy and peace. These super conscious crystals are activated to connect with your auric blueprint and assists in navigating you to your highest evolution. ✨ when you see or hold a piece you will automatically know if it is for you or not. Your INTUITION is the only gauge that can determine if it’s the right device for you.\n.\nEye offer affordable yet HIGH CALIBER energy devices for the collective. Eye am not in this field of work to over charge for MEDICINE that should be available to HEAL and EVOLVE. Eye want us all to WIN and GROW. -- You will find many beings charging a great deal for their devices OR selling them for cheap and mass producing them in other countries. Each device is intentionally crafted by me with care and attention that can be felt through time and space. These are all ART pieces that hold great FORCE that will CIRCULATE ENERGY through your mind, body and spirit. \n\nGoddess of Neutrality / Eye am konscious with Crystal beings / Creator of ancient energy batteries - My goal with every device is to bring PURE JOY in to the lives of those who are called. Eye heal myself through this work, thank u all for ur support. \n\nLearn more about me @ CirculateEnergy.com 🌺\nCirculateEnergy™ Opened Jan 2018 // Eye have been called to bring this work to the public after making effective sacred tools for myself and family for over 6 years // All profits goes towards my small organic community mission // Gratitude to the light beings walking with purpose manifesting the NEW earth ♥",
+              "announcement": "Anything eye ever do is geared towards the evolution and vibrational elevation of the COSMOS. Grow with me...\n\nSimilar to #Orgonite but not to be compared! This is GODDESS TECHNOLOGY to help assist those who are called to them. Eye am here taking BACK MY technology and rebalancing the collective with harmonization devices.\nThese devices circulate stagnant energy in your auric field. Essentially assisting you by moving energy that blocks you from ultimate joy and peace. These super conscious crystals are activated to connect with your auric blueprint and assists in navigating you to your highest evolution. ✨ when you see or hold a piece you will automatically know if it is for you or not. Your INTUITION is the only gauge that can determine if it's the right device for you.\n.\nEye offer affordable yet HIGH CALIBER energy devices for the collective. Eye am not in this field of work to over charge for MEDICINE that should be available to HEAL and EVOLVE. Eye want us all to WIN and GROW. -- You will find many beings charging a great deal for their devices OR selling them for cheap and mass producing them in other countries. Each device is intentionally crafted by me with care and attention that can be felt through time and space. These are all ART pieces that hold great FORCE that will CIRCULATE ENERGY through your mind, body and spirit. \n\nGoddess of Neutrality / Eye am konscious with Crystal beings / Creator of ancient energy batteries - My goal with every device is to bring PURE JOY in to the lives of those who are called. Eye heal myself through this work, thank u all for ur support. \n\nLearn more about me @ CirculateEnergy.com 🌺\nCirculateEnergy™ Opened Jan 2018 // Eye have been called to bring this work to the public after making effective sacred tools for myself and family for over 6 years // All profits goes towards my small organic community mission // Gratitude to the light beings walking with purpose manifesting the NEW earth ♥",
               "currency_code": "USD",
               "is_vacation": false,
               "vacation_message": null,
@@ -2987,7 +3118,9 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": null,        
+        "Images": [
               {
                   "listing_image_id": 1343288259,
                   "hex_code": "47755C",
@@ -3132,7 +3265,9 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": true,
-          "Images": [
+ 
+        "product_options": null,        
+        "Images": [
               {
                   "listing_image_id": 2038816538,
                   "hex_code": "7393AF",
@@ -3237,7 +3372,9 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": null,        
+        "Images": [
               {
                   "listing_image_id": 2038828098,
                   "hex_code": null,
@@ -3364,7 +3501,17 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": [
+            {
+                title: "Style",
+                description_1: "Gold Plated Brass",
+                description_2: "14k Gold Filled",
+                description_3: "Silver Plated Brass", 
+                description_4: "Sterling Silver",
+            },
+        ],         
+        "Images": [
               {
                   "listing_image_id": 666690322,
                   "hex_code": "C1BFB9",
@@ -3378,10 +3525,10 @@ module.exports = {
                   "creation_tsz": 1413224779,
                   "listing_id": 206998078,
                   "rank": 1,
-                  "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_75x75.666690322_aexr.jpg?version=1",
-                  "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_170x135.666690322_aexr.jpg?version=1",
-                  "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_570xN.666690322_aexr.jpg",
-                  "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_fullxfull.666690322_aexr.jpg",
+                  "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_75x75.666690322_aexr.jpg?version=1",
+                  "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_170x135.666690322_aexr.jpg?version=1",
+                  "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_570xN.666690322_aexr.jpg",
+                  "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_fullxfull.666690322_aexr.jpg",
                   "full_height": 1087,
                   "full_width": 1500
               },
@@ -3398,10 +3545,10 @@ module.exports = {
                   "creation_tsz": 1444664717,
                   "listing_id": 206998078,
                   "rank": 2,
-                  "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_75x75.849174756_7t97.jpg",
-                  "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_170x135.849174756_7t97.jpg",
-                  "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_570xN.849174756_7t97.jpg",
-                  "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_fullxfull.849174756_7t97.jpg",
+                  "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_75x75.849174756_7t97.jpg",
+                  "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_170x135.849174756_7t97.jpg",
+                  "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_570xN.849174756_7t97.jpg",
+                  "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_fullxfull.849174756_7t97.jpg",
                   "full_height": 1156,
                   "full_width": 1500
               },
@@ -3418,10 +3565,10 @@ module.exports = {
                   "creation_tsz": 1440861949,
                   "listing_id": 206998078,
                   "rank": 3,
-                  "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_75x75.825046420_oy3h.jpg",
-                  "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_170x135.825046420_oy3h.jpg",
-                  "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_570xN.825046420_oy3h.jpg",
-                  "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/_fullxfull.825046420_oy3h.jpg",
+                  "url_75x75": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_75x75.825046420_oy3h.jpg",
+                  "url_170x135": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_170x135.825046420_oy3h.jpg",
+                  "url_570xN": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_570xN.825046420_oy3h.jpg",
+                  "url_fullxfull": "https://forgetsyjewelry.s3.us-east-2.amazonaws.com/il_fullxfull.825046420_oy3h.jpg",
                   "full_height": 1127,
                   "full_width": 1500
               }
@@ -3490,7 +3637,9 @@ module.exports = {
               "15"
           ],
           "is_vintage": false,
-          "Images": [
+ 
+        "product_options": null,
+        "Images": [
               {
                   "listing_image_id": 2019666822,
                   "hex_code": "897965",

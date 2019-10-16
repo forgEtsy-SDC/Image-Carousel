@@ -19,6 +19,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Color",
+              description_1: "Red",
+              description_2: "Grey",
+              description_3: "Blue",
+            },
+          ],         
           "Images": [
               {
                   "listing_image_id": 1954347370,
@@ -106,6 +114,20 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Color",
+              description_1: "Green",
+              description_2: "Blue",
+              description_3: "Black",
+              description_4: "Red"
+            },
+            {
+                title: "Size",
+                description_1: "Small",
+                description_2: "Large",
+              },
+          ],         
           "Images": [
               {
                   "listing_image_id": 1550951046,
@@ -334,6 +356,15 @@ module.exports = {
               "EP379"
           ],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Emblem",
+                description_1: "Coffin",
+                description_2: "Skull",
+                description_3: "Snake",
+                description_4: "Platypus"
+              },
+          ],
           "Images": [
               {
                   "listing_image_id": 1423478832,
@@ -422,6 +453,14 @@ module.exports = {
               "EP411"
           ],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Emblem",
+                description_1: "Cat",
+                description_2: "Spider",
+                description_3: "Witch",
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1665121721,
@@ -528,6 +567,15 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Color",
+                description_1: "Green",
+                description_2: "Blue",
+                description_3: "Black",
+                description_4: "Yellow"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 882261006,
@@ -676,6 +724,15 @@ module.exports = {
               "JJ5D100"
           ],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Color",
+                description_1: "Gold",
+                description_2: "Blanched Almond",
+                description_3: "Black",
+                description_4: "Red"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1951998931,
@@ -899,6 +956,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Mask",
+                description_1: "Owl",
+                description_2: "Cat",
+                description_3: "Gecko",
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1623051298,
@@ -1125,6 +1190,7 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": null,
           "Images": [
               {
                   "listing_image_id": 1259831065,
@@ -1211,6 +1277,7 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": null,
           "Images": [
               {
                   "listing_image_id": 1212600840,
@@ -1298,6 +1365,13 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Type",
+                description_1: "Gold",
+                description_2: "Silver",
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1322534590,
@@ -1406,6 +1480,15 @@ module.exports = {
               "SCC243"
           ],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "iPhone",
+                description_1: "4",
+                description_2: "5",
+                description_3: "6/7",
+                description_4: "8"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1570027313,
@@ -1572,6 +1655,20 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Color",
+                description_1: "Green",
+                description_2: "Blue",
+                description_3: "Black",
+                description_4: "Red"
+            },
+            {
+                title: "Set",
+                description_1: "Regular",
+                description_2: "Full"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1728576052,
@@ -1797,6 +1894,13 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Color",
+                description_1: "Brown",
+                description_2: "Black",
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1934324478,
@@ -1980,6 +2084,7 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": null,
           "Images": [
               {
                   "listing_image_id": 1951999817,
@@ -2125,6 +2230,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options":[
+            {
+                title: "Size",
+                description_1: "Small",
+                description_2: "Medium",
+                description_3: "Large"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1910062237,
@@ -2291,6 +2404,15 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": true,
+          "product_options": [
+            {
+                title: "Color",
+                description_1: "White",
+                description_2: "Blue",
+                description_3: "Black",
+                description_4: "Red"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1824350893,
@@ -2421,6 +2543,14 @@ module.exports = {
               "T49"
           ],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Design",
+                description_1: "Striped",
+                description_2: "Solid",
+                description_3: "Checkered"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1392110387,
@@ -2648,6 +2778,7 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": null,
           "Images": [
               {
                   "listing_image_id": 1773015314,
@@ -2814,6 +2945,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Theme",
+                description_1: "Loki - Green",
+                description_2: "Loki - Black",
+                description_3: "Loki - Lowkey"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1708544870,
@@ -2899,6 +3038,15 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Color",
+                description_1: "White",
+                description_2: "Blue",
+                description_3: "Green",
+                description_4: "Red"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1570026831,
@@ -3001,6 +3149,7 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": null,
           "Images": [
               {
                   "listing_image_id": 1563092854,
@@ -3248,6 +3397,15 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Color",
+                description_1: "White",
+                description_2: "Green",
+                description_3: "Black",
+                description_4: "Red"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 2024453618,
@@ -3351,6 +3509,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Hue",
+                description_1: "Pink",
+                description_2: "Blue",
+                description_4: "Purple"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1223852218,
@@ -3459,6 +3625,13 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Shade",
+                description_1: "Dusty",
+                description_2: "Autumn",
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 1635015317,
@@ -3645,6 +3818,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": true,
+          "product_options": [
+            {
+                title: "Color",
+                description_1: "White",
+                description_2: "Blue",
+                description_4: "Yellow"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 918040530,

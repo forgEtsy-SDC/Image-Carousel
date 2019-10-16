@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 const { seedDatabase, Products } = require('./schema.js');
 
 // Connect database
-mongoose.connect(`mongodb://mongo:27017/docker-server-mongo`, {useNewUrlParser: true})
+let port = 'localhost'
+// let port = 'mongo'
+mongoose.connect(`mongodb://${port}/docker-server-mongo`, {useNewUrlParser: true})
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -27,7 +29,22 @@ const getImageUrls = (productId, callback) => {
   })
 }
 
+const getRandomProduct = (callback) => {
+  Products.count((err, count) => {
+    // Get a random entry
+    var random = Math.floor(Math.random() * count)
+    Products.find({}, (err, results) => {
+      if(err){
+        callback(err, null)
+      }else{
+        callback(null, results[random])
+      }
+    })
+  })
+}
+
 module.exports.getImageUrls = getImageUrls;
+module.exports.getRandomProduct = getRandomProduct;
 
 
 
