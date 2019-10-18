@@ -1,12 +1,15 @@
 const express = require('express')
 const { getImageUrls, getRandomProduct } = require('../database/db.js')
+const path = require('path');
 const cors = require('cors');
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use(cors());
+app.use(express.static(path.join(__dirname, '/../dist')));
+
+// app.use(cors());
 
 let port = 3003;
 

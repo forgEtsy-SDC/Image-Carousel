@@ -2,9 +2,10 @@ const mongoose = require('mongoose');
 const { seedDatabase, Products } = require('./schema.js');
 
 // Connect database
-// let port = 'localhost'
-let port = 'mongo'
-mongoose.connect(`mongodb://${port}/docker-server-mongo`, {useNewUrlParser: true})
+let port = 'localhost'
+// let port = 'mongo'
+mongoose.connect(`mongodb://${port}/products`, {useNewUrlParser: true})
+
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
