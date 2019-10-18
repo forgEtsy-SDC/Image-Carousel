@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 // Import product files
-const jewelry = require('../jewelry.js');
-// const housewares = require('../housewares.js');
-const accessories = require('../accessories.js');
-// const toys = require('../toys.js');
+const jewelry = require('./products/jewelry.js');
+const housewares = require('./products/housewares.js');
+const accessories = require('./products/accessories.js');
+const toys = require('./products/toys.js');
 
 // Set up schemas for database 'products'
 const imagesSchema = new mongoose.Schema({
@@ -66,9 +66,9 @@ const seedDatabase = () => {
       }else{
         if(count === 0){
           productsSave(jewelry.results);
-          // productsSave(housewares.results);
+          productsSave(housewares.results);
           productsSave(accessories.results);
-          // productsSave(toys.results);
+          productsSave(toys.results);
       }
     }
   })
