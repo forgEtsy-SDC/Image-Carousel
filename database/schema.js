@@ -1,5 +1,3 @@
-// Use faker for random review generator
-const faker = require('faker');
 const mongoose = require('mongoose');
 
 // Import product files
@@ -47,65 +45,13 @@ const productSchema = new mongoose.Schema({
   },
 });
 
-const reviewSchema = new mongoose.Schema({
-  review_id:{
-    type: Number,
-    unique: true,
-  },
-  // double check date format/keyword
-  date: Date,
-  description: String,
-  rating: Number,
-  user_name: String,
-  user_photo_url: String,
-  product_id: Number,
-  product_user_image_url: String,
-})
-
 const Products = mongoose.model('Products', productSchema);
-const Reviews = mongoose.model('Reviews', reviewSchema);
-
-
-// Saves array of reviews to database
-const reviewsSave = reviews => {
-  Reviews.insertMany(reviews)
-    .then(() => {
-      console.log('...Saved reviews to database...')
-    })
-    .catch((err) => {
-      console.log('...review saving err... :(', err.code);
-    })
-}
 
 // Saves array of products to database
 const productsSave = products => {
   Products.insertMany(products)
     .then((data) => {
       console.log('...Saved products to database...')
-      const reviews = [];
-      for(let i = 0; i < data.length; i++){
-        let listing_id = data[i].listing_id;
-        let max = 6;
-        let min = 4;
-        const random = Math.floor((Math.random() * (max - min)) + min+1);
-        for(let j = 0; j < random; j++){
-          let review = {
-            review_id: Number(`${listing_id}${i}${j}`),
-            date: faker.date.past(45),
-            description: faker.lorem.sentences(),
-            rating: Math.floor((Math.random() * 6)),
-            user_name: `${faker.name.firstName()} ${faker.name.lastName()}`,
-            user_photo_url: faker.image.avatar(),
-            product_id: listing_id,
-            product_user_image_url: 'FIND A ONE THINGY PICTURE ITEM BOI',
-          }
-          reviews.push(review);
-        }
-      }
-      return reviews;
-    })
-    .then((reviews) => {
-      reviewsSave(reviews);
     })
     .catch((err) => {
       console.log('...product saving err... :(', err);
@@ -119,10 +65,10 @@ const seedDatabase = () => {
         console.log('error counting')
       }else{
         if(count === 0){
-        productsSave(jewelry.results);
-        // productsSave(housewares.results);
-        productsSave(accessories.results);
-        // productsSave(toys.results);
+          productsSave(jewelry.results);
+          // productsSave(housewares.results);
+          productsSave(accessories.results);
+          // productsSave(toys.results);
       }
     }
   })
