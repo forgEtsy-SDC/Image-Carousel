@@ -1,5 +1,6 @@
 .scroller {
-    display: flex;
+    display: grid;
+    grid-template-rows: minmax(240px, 480px);
     grid-template-columns: minmax(240px, 480px);
     justify-items: center;
 }
