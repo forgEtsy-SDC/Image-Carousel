@@ -8,6 +8,7 @@ const MainImage = ({ url, scrollLeft, scrollRight }) => {
         gridTemplateColumns: '1fr 1fr',
         backgroundImage: `url(${url})`,
         backgroundRepeat: 'no-repeat',
+        backgroundSize: 'contain',
         backgroundPosition: 'center',
         width: '100%',
         maxHeight: '100%',
