@@ -4,6 +4,8 @@ import Arrow from '../Arrow/Arrow.jsx';
 
 const MainImage = ({ url, scrollLeft, scrollRight }) => {
     const style = {
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
         backgroundImage: `url(${url})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -14,7 +16,6 @@ const MainImage = ({ url, scrollLeft, scrollRight }) => {
         <div style={style}>
             {<Arrow direction={1} onclick={scrollLeft} char="&#8592;"/>}
             {<Arrow direction={0} onclick={scrollRight} char="&#8594;"/>}
-            {/* <img src={url}/> */}
         </div>
     )
 }

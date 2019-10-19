@@ -1,4 +1,4 @@
-.arrowleft {
+/* .arrowleft {
     position: relative;
     width: 30px;
     left: 3%;
@@ -11,8 +11,17 @@
     width: 30px;
     left: 94%;
     top: 45%;
+} */
+
+.arrowleft {
+    justify-self: flex-start;
+    /* width: 50%; */
 }
 
+.arrowright {
+    justify-self: flex-end;
+    /* width: 50%; */
+}
 
 .circle {
     text-align: center;
