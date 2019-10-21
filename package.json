@@ -5,8 +5,9 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo no test script available",
-    "start": "nodemon server/server.js",
-    "dev": "webpack -d --watch"
+    "start": "node server/server.js",
+    "dev": "webpack -d --watch",
+    "server:dev": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
