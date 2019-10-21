@@ -9,8 +9,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '/../dist')));
 
-// app.use(cors());
-
 let port = 3003;
 
 app.listen(port, () => {

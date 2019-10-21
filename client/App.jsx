@@ -33,12 +33,11 @@ class App extends React.Component {
 
   componentDidMount(){
     console.log('..Mounted..')
-    // let http = 'http://ec2-3-15-235-11.us-east-2.compute.amazonaws.com/urls';
     let http = 'http://localhost:3003/urls/random';
     // let http = 'http://localhost:3003/urls';
     axios.get(http, {
       params: {
-        // if enpoint is /urls, this is necessary
+        // if endpoint is /urls, this is necessary
         productId: 729513146
       }
     })

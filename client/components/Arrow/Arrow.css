@@ -2,12 +2,14 @@
     justify-self: flex-start;
     display: flex;
     margin: 5px;
+    grid-row-start: 2;
 }
 
 .arrowright {
     justify-self: flex-end;
     display: flex;
     margin: 10px;
+    grid-row-start: 2;
 }
 
 .circle {
@@ -15,8 +17,8 @@
     align-self: center;
     line-height: 15px;
     font-size: 30px;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     background-color: white;
     border-radius: 50%;
     border: none;

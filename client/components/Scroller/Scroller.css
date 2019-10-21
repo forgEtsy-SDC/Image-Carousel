@@ -1,22 +1,6 @@
 .scroller {
     display: grid;
-    grid-template-rows: minmax(240px, 480px);
+    grid-template-rows: 480px;
     grid-template-columns: minmax(240px, 480px);
     justify-items: center;
-}
-
-.heart {
-    position: relative;
-}
-
-.likebutton {
-    display: block;
-    text-align: center;
-    line-height: 15px;
-    font-size: 20px;
-    width: 30px;
-    height: 30px;
-    background-color: white; 
-    border-radius: 50%;
-    border: none;
 }

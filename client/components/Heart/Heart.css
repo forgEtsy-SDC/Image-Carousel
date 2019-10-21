@@ -1,0 +1,19 @@
+.favoritebutton {
+    justify-self: flex-end;
+    display: flex;
+    margin: 5px;
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
+
+.heart {
+  display: block;
+  align-self: center;
+  line-height: 15px;
+  font-size: 30px;
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+}
