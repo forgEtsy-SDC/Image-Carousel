@@ -13,6 +13,3 @@ const Heart = ({ toggleFavorite, favorited }) => {
 }
 
 export default Heart;
-
-//&#10084;	
-//&#9825;

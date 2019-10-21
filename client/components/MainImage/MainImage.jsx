@@ -15,6 +15,7 @@ const MainImage = ({ url, scrollLeft, scrollRight, toggleFavorite, favorited }) 
         width: '100%',
         maxHeight: '100%',
     }
+    
     return (
         <div style={style}>
             {<Heart toggleFavorite={toggleFavorite} favorited={favorited}/>}

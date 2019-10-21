@@ -4,7 +4,6 @@ import Style from './App.css';
 
 import Scroller from './components/Scroller/Scroller.jsx';
 import ImageBar from './components/ImageBar/ImageBar.jsx'
-
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -49,17 +48,17 @@ class App extends React.Component {
       console.log(data.data.favorite);
     })
     .catch((err) => {
-      console.log('updating error');
+      console.log(err);
     })
   }
 
   componentDidMount(){
-    console.log('..Mounted..')
     let http = 'http://localhost:3003/urls/random';
     // let http = 'http://localhost:3003/urls';
     axios.get(http, {
       params: {
-        // if endpoint is /urls, this is necessary
+        // Will use current product ID when passed from other service
+        // For now a random product will be displayed
         productId: 729513146
       }
     })
@@ -95,7 +94,7 @@ class App extends React.Component {
             toggleFavorite={this.toggleFavorite}
             favorited={this.state.favorite}
           />
-          <ImageBar urls={this.state.url_75x75s}/>
+          <ImageBar urls={this.state.url_75x75s} index={this.state.index}/>
         </div>
       </div>
     )

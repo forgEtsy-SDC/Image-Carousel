@@ -1,4 +1,10 @@
 .thumbnail {
     justify-self: center;
-    margin: 1px;
+    margin: 3px;
+    opacity: 0.5;
+}
+
+.thumbnailselected {
+    justify-self: center;
+    margin: 3px;
 }
