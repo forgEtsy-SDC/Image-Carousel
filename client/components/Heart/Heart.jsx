@@ -5,7 +5,7 @@ const Heart = ({char}) => {
   return (
     <div className={Style.favoritebutton}>
       <button className={Style.heart} >
-          <span>{char}</span>
+          <span className={Style.span}>{char}</span>
       </button>
     </div>
   )

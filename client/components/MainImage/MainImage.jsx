@@ -1,12 +1,12 @@
 import React from 'react';
-import Style from './MainImage.css';
+
 import Arrow from '../Arrow/Arrow.jsx';
 import Heart from '../Heart/Heart.jsx';
 
 const MainImage = ({ url, scrollLeft, scrollRight }) => {
     const style = {
         display: 'grid',
-        gridTemplateRows: '50px 1fr',
+        gridTemplateRows: '50px 1fr 50px',
         gridTemplateColumns: '1fr 1fr',
         backgroundImage: `url(${url})`,
         backgroundRepeat: 'no-repeat',

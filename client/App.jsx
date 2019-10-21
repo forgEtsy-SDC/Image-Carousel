@@ -65,7 +65,7 @@ class App extends React.Component {
       <div>
         <div className={Style.carousel}>
           <Scroller 
-            url={this.state.url_570xNs[this.state.index]}
+            url={this.state.url_fullxfulls[this.state.index]}
             scrollLeft={this.scrollLeft}
             scrollRight={this.scrollRight}
           />
