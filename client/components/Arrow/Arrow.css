@@ -1,24 +1,23 @@
 .arrowleft {
-    position: relative;
-    width: 30px;
-    left: 3%;
-    top: 50%;
+    justify-self: flex-start;
+    display: flex;
+    margin: 5px;
 }
 
 .arrowright {
-    position: relative;
-    text-align: center;
-    width: 30px;
-    left: 94%;
-    top: 45%;
+    justify-self: flex-end;
+    display: flex;
+    margin: 10px;
 }
 
-
 .circle {
-    text-align: center;
-    font-size: 20px;
-    width: 30px;
-    height: 30px;
+    display: block;
+    align-self: center;
+    line-height: 15px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
     background-color: white;
     border-radius: 50%;
+    border: none;
 }

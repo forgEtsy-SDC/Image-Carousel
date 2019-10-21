@@ -64,10 +64,6 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <div className={Style.header}>
-          <h1>forGetsy</h1>
-          <h3>Search Bar</h3>
-        </div>
         <div className={Style.carousel}>
           <Scroller 
             url={this.state.url_570xNs[this.state.index]}
