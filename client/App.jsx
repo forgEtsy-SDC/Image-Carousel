@@ -95,7 +95,7 @@ class App extends React.Component {
             toggleFavorite={this.toggleFavorite}
             favorited={this.state.favorite}
           />
-          <ImageBar urls={this.state.url_75x75s}/>
+          <ImageBar urls={this.state.url_75x75s} index={this.state.index}/>
         </div>
       </div>
     )
