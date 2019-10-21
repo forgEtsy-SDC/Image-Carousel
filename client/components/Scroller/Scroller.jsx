@@ -8,9 +8,6 @@ const Scroller = ({ url, scrollLeft, scrollRight }) => {
     return (
         <div className={Style.scroller}>
             {<MainImage url={url} scrollLeft={scrollLeft} scrollRight={scrollRight} />}
-            <div className={Style.heart}>
-                <button className={Style.likebutton}>&#10084;</button>
-            </div>
         </div>
     )
 }
