@@ -58,7 +58,6 @@ class App extends React.Component {
 
   componentDidMount(){
     let http = 'http://localhost:3003/urls/random';
-    // let http = 'http://localhost:3003/urls';
     axios.get(http, {
       params: {
         // Will use current product ID when passed from other service
@@ -67,7 +66,6 @@ class App extends React.Component {
       }
     })
     .then(({ data }) => {
-      console.log(data);
       this.setState({
         productId: data.productId,
         favorite: data.favorite,
