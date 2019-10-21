@@ -15,8 +15,8 @@ const MainImage = ({ url, scrollLeft, scrollRight }) => {
     }
     return (
         <div style={style}>
-            {<Arrow direction={1} onclick={scrollLeft} char="&#8592;"/>}
-            {<Arrow direction={0} onclick={scrollRight} char="&#8594;"/>}
+            {<Arrow direction={1} onclick={scrollLeft} char="<"/>}
+            {<Arrow direction={0} onclick={scrollRight} char=">"/>}
         </div>
     )
 }
