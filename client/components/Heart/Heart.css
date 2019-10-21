@@ -4,9 +4,10 @@
     margin: 5px;
     grid-row-start: 1;
     grid-column-start: 2;
-}
-
+  }
+  
 .heart {
+  background-color: white;
   display: block;
   align-self: center;
   line-height: 12px;
@@ -15,8 +16,4 @@
   height: 30px;
   border-radius: 50%;
   border: none;
-}
-
-.span {
-  background-color: red;
 }

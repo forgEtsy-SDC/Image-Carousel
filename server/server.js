@@ -1,5 +1,5 @@
 const express = require('express')
-const { getImageUrls, getRandomProduct } = require('../database/db.js')
+const { getImageUrls, getRandomProduct, toggleFavorite } = require('../database/db.js')
 const path = require('path');
 const cors = require('cors');
 
@@ -16,6 +16,7 @@ app.listen(port, () => {
 })
 
 app.get('/urls', (req, res) => {
+  console.log(req.query.productId)
   getImageUrls(req.query.productId, (err, urls) => {
     if(err){
       console.log(err)
@@ -40,6 +41,16 @@ app.get('/urls/random', (req, res) => {
   })
 })
 
+app.post('/urls/update', (req, res) => {
+  toggleFavorite(req.body.params.productId, req.body.params.favorite, (err, results) => {
+    if(err){
+      console.log('error toggling favorite')
+    }else{
+      res.send(results)
+    }
+  })
+})
+
 const saveUrls = (urls) => {
   let images = urls[0].Images;
   const state = {}
@@ -53,6 +64,8 @@ const saveUrls = (urls) => {
     state.fiveSeventies.push(images[i].url_570xN);
     state.fulls.push(images[i].url_fullxfull);
   }
+  state.productId = urls[0].listing_id;
+  state.favorite = urls[0].favorite;
   return state;
 }
 

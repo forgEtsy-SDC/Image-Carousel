@@ -9,6 +9,8 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      productId: null,
+      favorite: null,
       url_75x75s: [],
       url_170x135s: [],
       url_570xNs: [],
@@ -17,6 +19,7 @@ class App extends React.Component {
     }
     this.scrollRight = this.scrollRight.bind(this);
     this.scrollLeft = this.scrollLeft.bind(this);
+    this.toggleFavorite = this.toggleFavorite.bind(this);
   }
 
   scrollRight(){
@@ -31,19 +34,39 @@ class App extends React.Component {
     })
   }
 
+  toggleFavorite(){
+    let http = 'http://localhost:3003/urls/update';
+    axios.post(http, {
+      params: {
+        productId: this.state.productId,
+        favorite: !this.state.favorite
+      }
+    })
+    .then((data) => {
+      this.setState({
+        favorite: !this.state.favorite
+      })
+    })
+    .catch((err) => {
+      console.log('updating error');
+    })
+  }
+
   componentDidMount(){
     console.log('..Mounted..')
-    let http = 'http://localhost:3003/urls/random';
-    // let http = 'http://localhost:3003/urls';
+    // let http = 'http://localhost:3003/urls/random';
+    let http = 'http://localhost:3003/urls';
     axios.get(http, {
       params: {
         // if endpoint is /urls, this is necessary
         productId: 729513146
       }
     })
-    .then(( { data }) => {
+    .then(({ data }) => {
       console.log(data);
       this.setState({
+        productId: data.productId,
+        favorite: data.favorite,
         url_75x75s: data.seventyFives,
         url_170x135s: data.oneSeventies,
         url_570xNs: data.fiveSeventies,
@@ -68,6 +91,7 @@ class App extends React.Component {
             url={this.state.url_fullxfulls[this.state.index]}
             scrollLeft={this.scrollLeft}
             scrollRight={this.scrollRight}
+            toggleFavorite={this.toggleFavorite}
           />
           <ImageBar urls={this.state.url_75x75s}/>
         </div>

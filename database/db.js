@@ -43,8 +43,26 @@ const getRandomProduct = (callback) => {
   })
 }
 
+const toggleFavorite = (productId, favorite, callback) => {
+  console.log(productId);
+  Products.findOneAndUpdate({listing_id: productId}, {favorite: favorite}, (err, results) => {
+    if(results.length === 0){
+      results[0] = {
+        type: 'Error',
+        message: 'No listing_id found'
+      }
+    }
+    if(err){
+      callback(err, null);
+    }else{
+      callback(null, results);
+    }
+  })
+}
+
 module.exports.getImageUrls = getImageUrls;
 module.exports.getRandomProduct = getRandomProduct;
+module.exports.toggleFavorite = toggleFavorite;
 
 
 
