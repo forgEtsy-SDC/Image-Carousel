@@ -43,6 +43,7 @@ const productSchema = new mongoose.Schema({
     title: String,
     icon_url_fullxfull: String,
   },
+  favorite: Boolean,
 });
 
 const Products = mongoose.model('Products', productSchema);
@@ -65,13 +66,21 @@ const seedDatabase = () => {
         console.log('error counting')
       }else{
         if(count === 0){
-          productsSave(jewelry.results);
-          productsSave(housewares.results);
-          productsSave(accessories.results);
-          productsSave(toys.results);
+          setFavoritesAndSave(jewelry.results);
+          setFavoritesAndSave(housewares.results);
+          setFavoritesAndSave(accessories.results);
+          setFavoritesAndSave(toys.results);
       }
     }
   })
+}
+
+// Default all products to unfavorited
+const setFavoritesAndSave = (products) => {
+  for(let i = 0; i < products.length; i++){
+    products[i].favorite = false;
+  }
+  productsSave(products);
 }
 
 module.exports.seedDatabase = seedDatabase;
