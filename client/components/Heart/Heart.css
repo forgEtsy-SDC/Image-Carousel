@@ -16,4 +16,14 @@
   height: 30px;
   border-radius: 50%;
   border: none;
+  font-weight: bold;
+}
+
+.favorited {
+  color: red;
+
+}
+
+.unfavorited {
+  color: black;
 }

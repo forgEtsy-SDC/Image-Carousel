@@ -16,7 +16,6 @@ app.listen(port, () => {
 })
 
 app.get('/urls', (req, res) => {
-  console.log(req.query.productId)
   getImageUrls(req.query.productId, (err, urls) => {
     if(err){
       console.log(err)

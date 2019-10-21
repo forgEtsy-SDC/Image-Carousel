@@ -44,7 +44,6 @@ const getRandomProduct = (callback) => {
 }
 
 const toggleFavorite = (productId, favorite, callback) => {
-  console.log(productId);
   Products.findOneAndUpdate({listing_id: productId}, {favorite: favorite}, (err, results) => {
     if(results.length === 0){
       results[0] = {

@@ -46,6 +46,7 @@ class App extends React.Component {
       this.setState({
         favorite: !this.state.favorite
       })
+      console.log(data.data.favorite);
     })
     .catch((err) => {
       console.log('updating error');
@@ -54,8 +55,8 @@ class App extends React.Component {
 
   componentDidMount(){
     console.log('..Mounted..')
-    // let http = 'http://localhost:3003/urls/random';
-    let http = 'http://localhost:3003/urls';
+    let http = 'http://localhost:3003/urls/random';
+    // let http = 'http://localhost:3003/urls';
     axios.get(http, {
       params: {
         // if endpoint is /urls, this is necessary
@@ -92,6 +93,7 @@ class App extends React.Component {
             scrollLeft={this.scrollLeft}
             scrollRight={this.scrollRight}
             toggleFavorite={this.toggleFavorite}
+            favorited={this.state.favorite}
           />
           <ImageBar urls={this.state.url_75x75s}/>
         </div>

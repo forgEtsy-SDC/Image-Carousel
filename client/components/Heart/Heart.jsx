@@ -1,14 +1,18 @@
 import React from 'react';
 import Style from './Heart.css';
 
-const Heart = ({char, toggleFavorite}) => {
-  return (
-    <div className={Style.favoritebutton}>
+const Heart = ({ toggleFavorite, favorited }) => {
+    return (
+      <div className={Style.favoritebutton}>
       <button className={Style.heart} onClick={toggleFavorite}>
-          <span>{char}</span>
+          <span className={favorited ? Style.favorited : Style.unfavorited}>&#9825;</span>
       </button>
     </div>
   )
+
 }
 
 export default Heart;
+
+//&#10084;	
+//&#9825;

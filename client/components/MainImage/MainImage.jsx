@@ -3,7 +3,7 @@ import React from 'react';
 import Arrow from '../Arrow/Arrow.jsx';
 import Heart from '../Heart/Heart.jsx';
 
-const MainImage = ({ url, scrollLeft, scrollRight, toggleFavorite }) => {
+const MainImage = ({ url, scrollLeft, scrollRight, toggleFavorite, favorited }) => {
     const style = {
         display: 'grid',
         gridTemplateRows: '50px 1fr 50px',
@@ -17,7 +17,7 @@ const MainImage = ({ url, scrollLeft, scrollRight, toggleFavorite }) => {
     }
     return (
         <div style={style}>
-            {<Heart toggleFavorite={toggleFavorite} char="&#9825;"/>}
+            {<Heart toggleFavorite={toggleFavorite} favorited={favorited}/>}
             {<Arrow direction={1} onclick={scrollLeft} char="<"/>}
             {<Arrow direction={0} onclick={scrollRight} char=">"/>}
         </div>

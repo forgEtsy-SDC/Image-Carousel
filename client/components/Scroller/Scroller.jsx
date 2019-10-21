@@ -3,7 +3,7 @@ import Style from './Scroller.css';
 import MainImage from '../MainImage/MainImage.jsx';
 import Arrow from '../Arrow/Arrow.jsx';
 
-const Scroller = ({ url, scrollLeft, scrollRight, toggleFavorite }) => {
+const Scroller = ({ url, scrollLeft, scrollRight, toggleFavorite, favorited }) => {
     // TODO: Add class name and css file
     return (
         <div className={Style.scroller}>
@@ -12,6 +12,7 @@ const Scroller = ({ url, scrollLeft, scrollRight, toggleFavorite }) => {
             scrollLeft={scrollLeft} 
             scrollRight={scrollRight} 
             toggleFavorite={toggleFavorite}
+            favorited={favorited}
             />}
         </div>
     )
