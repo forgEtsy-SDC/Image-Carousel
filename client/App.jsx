@@ -1,15 +1,19 @@
 import React from 'React';
 import axios from 'axios';
+import faker from 'faker';
+
 import Style from './App.css';
 
 import Scroller from './components/Scroller/Scroller.jsx';
-import ImageBar from './components/ImageBar/ImageBar.jsx'
+import ImageBar from './components/ImageBar/ImageBar.jsx';
+import Footer from './components/Footer/Footer.jsx';
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       productId: null,
       favorite: null,
+      url_avatar: null,
       url_75x75s: [],
       url_170x135s: [],
       url_570xNs: [],
@@ -71,6 +75,7 @@ class App extends React.Component {
         url_170x135s: data.oneSeventies,
         url_570xNs: data.fiveSeventies,
         url_fullxfulls: data.fulls,
+        url_avatar: faker.image.avatar()
       })
     })
     .catch((err) => {
@@ -95,6 +100,7 @@ class App extends React.Component {
             favorited={this.state.favorite}
           />
           <ImageBar urls={this.state.url_75x75s} index={this.state.index}/>
+          <Footer url={this.state.url_avatar}/>
         </div>
       </div>
     )
