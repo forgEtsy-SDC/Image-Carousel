@@ -5,8 +5,7 @@ import Thumbnail from '../Thumbnail/Thumbnail.jsx';
 const ImageBar = ({ urls, index }) => {
     return(
         <div className={Style.imagebar}>
-            {urls.map((url, i) => <Thumbnail key={i} url={url} 
-            selected={(index === i ? true : false)}/> )}
+            {urls.map((url, i) => <Thumbnail key={i} url={url} selected={(index === i ? true : false)}/> )}
         </div>
     )
 }
