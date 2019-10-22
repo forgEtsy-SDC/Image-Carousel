@@ -1,7 +1,7 @@
 {
   "name": "ForgEtsy_Image_Carousel_Service",
   "version": "1.0.0",
-  "description": "",
+  "description": "Main Image Carousel Service for ForgEtsy LLC",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo no test script available",

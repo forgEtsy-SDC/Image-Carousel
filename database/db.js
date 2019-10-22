@@ -4,7 +4,7 @@ const { seedDatabase, Products } = require('./schema.js');
 // Connect database
 // let port = 'localhost'
 let port = 'mongo'
-mongoose.connect(`mongodb://${port}/products`, {useNewUrlParser: true})
+mongoose.connect(`mongodb://${port}:27017/products`, {useNewUrlParser: true})
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
