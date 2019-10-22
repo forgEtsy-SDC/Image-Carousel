@@ -16,12 +16,13 @@
   height: 30px;
   border-radius: 50%;
   border: none;
+  outline: none;
+  cursor: pointer;
   font-weight: bold;
 }
 
 .favorited {
   color: red;
-
 }
 
 .unfavorited {

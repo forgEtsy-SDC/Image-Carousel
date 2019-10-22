@@ -61,8 +61,8 @@ class App extends React.Component {
   }
 
   toggleFavorite(){
-    // let http = 'http://ec2-3-15-175-239.us-east-2.compute.amazonaws.com/urls/update';
-    let http = 'http://localhost:3003/urls/update';
+    let http = 'http://ec2-3-15-175-239.us-east-2.compute.amazonaws.com/urls/update';
+    // let http = 'http://localhost:3003/urls/update';
     axios.post(http, {
       params: {
         productId: this.state.productId,
@@ -81,8 +81,8 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    // let http = 'http://ec2-3-15-175-239.us-east-2.compute.amazonaws.com/urls/random';
-    let http = 'http://localhost:3003/urls/random';
+    let http = 'http://ec2-3-15-175-239.us-east-2.compute.amazonaws.com/urls/random';
+    // let http = 'http://localhost:3003/urls/random';
     axios.get(http, {
       params: {
         // Will use current product ID when passed from other service
