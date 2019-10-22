@@ -7,13 +7,13 @@
 
 .carousel {
   display: grid;
-  grid-template-rows: minmax(240px, 480px) 85px 85px 1px;
+  grid-template-rows: minmax(240px, 480px) 85px 85px;
   justify-items: center;
 }
 
-.line {
+/* .line {
   justify-self: center;
   width: 85%;
   background-color: #FAF9F5;
   border-color: #E1E3DF;
-}
+} */

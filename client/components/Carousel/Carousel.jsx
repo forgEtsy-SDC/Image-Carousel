@@ -82,7 +82,7 @@ class Carousel extends React.Component {
   }
 
   componentDidUpdate(prevProps){
-    // console.log(prevProps.match.params.productId);
+    console.log(this.props.match.params.productId);
     // console.log(prevProps.location.pathname);
     if(prevProps.match.params.productId !== this.props.match.params.productId){
       this.getImages();
@@ -141,7 +141,7 @@ class Carousel extends React.Component {
           <ImageBar urls={this.state.url_75x75s} index={this.state.index}/>
           <Footer url={this.state.url_avatar}/>
         </div>
-        <hr className={Style.line}></hr>
+        {/* <hr className={Style.line}></hr> */}
       </div>
     )
   }else{
