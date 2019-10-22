@@ -19,10 +19,14 @@ class App extends React.Component {
       url_570xNs: [],
       url_fullxfulls: [],
       index: 0,
+      lefthovering: false,
+      righthovering: false,
     }
     this.scrollRight = this.scrollRight.bind(this);
     this.scrollLeft = this.scrollLeft.bind(this);
     this.toggleFavorite = this.toggleFavorite.bind(this);
+    this.overArrow = this.overArrow.bind(this);
+    this.exitArrow = this.exitArrow.bind(this);
   }
 
   scrollRight(){
@@ -37,8 +41,28 @@ class App extends React.Component {
     })
   }
 
+  overArrow(direction){
+    if(direction === 1){
+      this.setState({
+        lefthovering: true,
+      })
+    }else{
+        this.setState({
+          righthovering: true,
+        })
+    }
+  }
+
+  exitArrow(){
+    this.setState({
+      lefthovering: false,
+      righthovering: false,
+    })
+  }
+
   toggleFavorite(){
     let http = 'http://ec2-3-15-175-239.us-east-2.compute.amazonaws.com/urls/update';
+    // let http = 'http://localhost:3003/urls/update';
     axios.post(http, {
       params: {
         productId: this.state.productId,
@@ -58,6 +82,7 @@ class App extends React.Component {
 
   componentDidMount(){
     let http = 'http://ec2-3-15-175-239.us-east-2.compute.amazonaws.com/urls/random';
+    // let http = 'http://localhost:3003/urls/random';
     axios.get(http, {
       params: {
         // Will use current product ID when passed from other service
@@ -88,18 +113,23 @@ class App extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className={Style.container}>
         <div className={Style.carousel}>
           <Scroller 
             url={this.state.url_fullxfulls[this.state.index]}
             scrollLeft={this.scrollLeft}
             scrollRight={this.scrollRight}
             toggleFavorite={this.toggleFavorite}
+            overArrow={this.overArrow}
+            exitArrow={this.exitArrow}
             favorited={this.state.favorite}
+            lefthovering={this.state.lefthovering}
+            righthovering={this.state.righthovering}
           />
           <ImageBar urls={this.state.url_75x75s} index={this.state.index}/>
           <Footer url={this.state.url_avatar}/>
         </div>
+        <hr className={Style.line}></hr>
       </div>
     )
   }
