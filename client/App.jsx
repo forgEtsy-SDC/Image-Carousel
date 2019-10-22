@@ -113,7 +113,7 @@ class App extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className={Style.container}>
         <div className={Style.carousel}>
           <Scroller 
             url={this.state.url_fullxfulls[this.state.index]}
@@ -129,6 +129,7 @@ class App extends React.Component {
           <ImageBar urls={this.state.url_75x75s} index={this.state.index}/>
           <Footer url={this.state.url_avatar}/>
         </div>
+        <hr className={Style.line}></hr>
       </div>
     )
   }

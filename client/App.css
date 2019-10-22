@@ -1,12 +1,19 @@
-.header {
-  max-width: 1400px;
+.container {
+  display: grid;
+  max-width: 70%;
   width: auto;
+  justify-items: center;
 }
 
 .carousel {
   display: grid;
-  grid-template-rows: minmax(240px, 480px) 85px 85px;
-  width: 60%;
-  margin-left: 15%; 
+  grid-template-rows: minmax(240px, 480px) 85px 85px 1px;
   justify-items: center;
+}
+
+.line {
+  justify-self: center;
+  width: 85%;
+  background-color: #FAF9F5;
+  border-color: #E1E3DF;
 }
