@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  max-width: 70%;
+  width: auto;
+  justify-items: center;
+}
+
+.carousel {
+  display: grid;
+  grid-template-rows: minmax(240px, 480px) 85px 85px;
+  justify-items: center;
+}
