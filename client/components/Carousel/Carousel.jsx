@@ -11,8 +11,9 @@ import Footer from '../Footer/Footer.jsx';
 class Carousel extends React.Component {
   constructor(props){
     super(props);
+
     this.state = {
-      productId: null,
+      productId: this.props.match.params.productId,
       favorite: null,
       url_avatar: null,
       url_75x75s: [],
@@ -28,6 +29,8 @@ class Carousel extends React.Component {
     this.toggleFavorite = this.toggleFavorite.bind(this);
     this.overArrow = this.overArrow.bind(this);
     this.exitArrow = this.exitArrow.bind(this);
+    this.updateLocation = this.updateLocation.bind(this);
+    this.getImages = this.getImages.bind(this);
   }
 
   scrollRight(){
@@ -62,8 +65,8 @@ class Carousel extends React.Component {
   }
 
   toggleFavorite(){
-    // let http = 'http://ec2-3-15-175-239.us-east-2.compute.amazonaws.com/urls/update';
-    let http = 'http://localhost:3003/urls/update';
+    let http = 'http://ec2-3-15-175-239.us-east-2.compute.amazonaws.com/urls/update';
+    // let http = 'http://localhost:3003/urls/update';
     axios.post(http, {
       params: {
         productId: this.state.productId,
@@ -80,25 +83,30 @@ class Carousel extends React.Component {
       console.log(err);
     })
   }
-
-  componentDidUpdate(prevProps){
-    console.log(this.props.match.params.productId);
-    // console.log(prevProps.location.pathname);
-    if(prevProps.match.params.productId !== this.props.match.params.productId){
-      this.getImages();
+  
+  updateLocation(){
+    let productId = window.location.pathname;
+    productId = productId.replace(/\//, '');
+    if(Number(productId) !== this.state.productId){
+      this.getImages(productId);
     }
   }
 
   componentDidMount(){
-    this.getImages();
+    window.addEventListener('click', this.updateLocation);
+    this.getImages(this.state.productId);
   }
 
-  getImages(){
-    // let http = 'http://ec2-3-15-175-239.us-east-2.compute.amazonaws.com/urls/random';
-    let http = 'http://localhost:3003/urls';
+  componentWillUnmount(){
+    window.removeEventListener('click', this.updateLocation);
+  }
+
+  getImages(productId){
+    let http = 'http://ec2-3-15-175-239.us-east-2.compute.amazonaws.com/urls';
+    // let http = 'http://localhost:3003/urls';
     axios.get(http, {
       params: {
-        productId: this.props.match.params.productId,
+        productId: productId,
       }
     })
     .then(({ data }) => {
@@ -141,7 +149,6 @@ class Carousel extends React.Component {
           <ImageBar urls={this.state.url_75x75s} index={this.state.index}/>
           <Footer url={this.state.url_avatar}/>
         </div>
-        {/* <hr className={Style.line}></hr> */}
       </div>
     )
   }else{
