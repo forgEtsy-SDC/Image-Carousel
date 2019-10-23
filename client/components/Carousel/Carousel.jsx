@@ -7,6 +7,7 @@ import Style from './Carousel.css';
 import Scroller from '../Scroller/Scroller.jsx';
 import ImageBar from '../ImageBar/ImageBar.jsx';
 import Footer from '../Footer/Footer.jsx';
+import EnlargedImage from '../EnlargedImage/EnlargedImage.jsx';
 
 class Carousel extends React.Component {
   constructor(props){
@@ -24,14 +25,17 @@ class Carousel extends React.Component {
       index: 0,
       lefthovering: false,
       righthovering: false,
+      imageZoom: false,
     }
-    this.scrollRight = this.scrollRight.bind(this);
-    this.scrollLeft = this.scrollLeft.bind(this);
-    this.toggleFavorite = this.toggleFavorite.bind(this);
+    // Bind any functions passed as props to parent
     this.overArrow = this.overArrow.bind(this);
     this.exitArrow = this.exitArrow.bind(this);
-    this.updateLocation = this.updateLocation.bind(this);
     this.getImages = this.getImages.bind(this);
+    this.scrollLeft = this.scrollLeft.bind(this);
+    this.scrollRight = this.scrollRight.bind(this);
+    this.updateLocation = this.updateLocation.bind(this);
+    this.toggleFavorite = this.toggleFavorite.bind(this);
+    this.toggleImageZoom = this.toggleImageZoom.bind(this);
   }
 
   scrollRight(){
@@ -65,6 +69,16 @@ class Carousel extends React.Component {
     })
   }
 
+  toggleImageZoom(){
+    console.log('toggle zoom');
+    if(!this.state.lefthovering && !this.state.righthovering){
+      this.setState({
+        imageZoom: !this.state.imageZoom
+      })
+    }
+  }
+
+
   toggleFavorite(){
     // let http = 'http://ec2-18-222-211-24.us-east-2.compute.amazonaws.com/urls/update';
     let http = 'http://localhost:3003/urls/update';
@@ -85,11 +99,12 @@ class Carousel extends React.Component {
   }
   
   updateLocation(){
-    let productId = window.location.pathname;
-    productId = productId.replace(/\//, '');
-    if(Number(productId) !== this.state.productId){
-      this.getImages(productId);
-    }
+    // NOT IN USE FOR DEVELOPMENT
+    // let productId = window.location.pathname;
+    // productId = productId.replace(/\//, '');
+    // if(Number(productId) !== this.state.productId){
+    //   this.getImages(productId);
+    // }
   }
 
   componentDidMount(){
@@ -134,22 +149,29 @@ class Carousel extends React.Component {
     if(this.state.productId){
       return (
         <div className={Style.container}>
-        <div className={Style.carousel}>
-          <Scroller 
-            url={this.state.url_fullxfulls[this.state.index]}
-            scrollLeft={this.scrollLeft}
-            scrollRight={this.scrollRight}
-            toggleFavorite={this.toggleFavorite}
-            overArrow={this.overArrow}
-            exitArrow={this.exitArrow}
-            favorited={this.state.favorite}
-            lefthovering={this.state.lefthovering}
-            righthovering={this.state.righthovering}
-          />
-          <ImageBar urls={this.state.url_75x75s} index={this.state.index}/>
-          <Footer url={this.state.url_avatar}/>
+          {!this.state.imageZoom ? null : 
+            <div>
+              <EnlargedImage toggleImageZoom={this.toggleImageZoom} 
+              image_url={this.state.url_fullxfulls[this.state.index]}/>
+            </div>}
+          <div className={Style.carousel}>
+            <Scroller 
+              favorited={this.state.favorite}
+              imageZoom={this.state.imageZoom}
+              lefthovering={this.state.lefthovering}
+              righthovering={this.state.righthovering}
+              overArrow={this.overArrow}
+              exitArrow={this.exitArrow}
+              scrollLeft={this.scrollLeft}
+              scrollRight={this.scrollRight}
+              toggleFavorite={this.toggleFavorite}
+              toggleImageZoom={this.toggleImageZoom}
+              url={this.state.url_fullxfulls[this.state.index]}
+            />
+            <ImageBar urls={this.state.url_75x75s} index={this.state.index}/>
+            <Footer url={this.state.url_avatar}/>
+          </div>
         </div>
-      </div>
     )
   }else{
     return (

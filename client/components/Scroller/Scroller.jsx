@@ -2,9 +2,11 @@ import React from 'react'
 import Style from './Scroller.css';
 import MainImage from '../MainImage/MainImage.jsx';
 
-const Scroller = ({ url, scrollLeft, scrollRight, toggleFavorite, favorited, overArrow, exitArrow, lefthovering, righthovering }) => {
+const Scroller = ({ url, scrollLeft, scrollRight, imageZoom,
+                    toggleFavorite, favorited, overArrow, 
+                    exitArrow, lefthovering, righthovering, toggleImageZoom }) => {
     return (
-        <div className={Style.scroller}>
+        <div className={Style.scroller} onClick={toggleImageZoom}>
             {<MainImage 
                 url={url} 
                 scrollLeft={scrollLeft} 
