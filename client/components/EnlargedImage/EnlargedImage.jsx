@@ -1,16 +1,31 @@
 import React from 'react';
 import Style from './EnlargedImage.css';
+import ReactModal from 'react-modal';
 
-const EnlargedImage = ({toggleImageZoom, image_url}) => {
+ReactModal.setAppElement('body')
+
+const EnlargedImage = ({toggleImageZoom, image_url, imageZoom}) => {
   const style = {
     backgroundImage: `url(${image_url})`,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',
+    backgroundSize: 'cover',
     backgroundPosition: 'center',
-  }
+    width: '100%',
+    maxHeight: '100%',
+    outline: '1px solid grey',
+}
   return (
-    <div className={Style.overlay} onClick={toggleImageZoom}>
-      <img src={image_url}/>
+    <div>
+      <ReactModal 
+        isOpen={imageZoom}
+        onRequestClose={toggleImageZoom}
+        shouldCloseOnOverlayClick={true}
+        className={Style.modal}
+      >
+        <div style={style} onClick={toggleImageZoom}>
+          <button className={Style.button} onClick={toggleImageZoom}>X</button>
+        </div>
+      </ReactModal>
     </div>
   )
 }

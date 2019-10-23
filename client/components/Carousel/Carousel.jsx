@@ -1,13 +1,13 @@
 import React from 'React';
 import axios from 'axios';
 import faker from 'faker';
-import { match } from 'react-router-dom';
+
 import Style from './Carousel.css';
 
 import Scroller from '../Scroller/Scroller.jsx';
 import ImageBar from '../ImageBar/ImageBar.jsx';
 import Footer from '../Footer/Footer.jsx';
-import EnlargedImage from '../EnlargedImage/EnlargedImage.jsx';
+import EnlargedImage from '../EnlargedImage/EnlargedImage.jsx'
 
 class Carousel extends React.Component {
   constructor(props){
@@ -25,9 +25,12 @@ class Carousel extends React.Component {
       index: 0,
       lefthovering: false,
       righthovering: false,
+      hearthovering: false,
       imageZoom: false,
     }
     // Bind any functions passed as props to parent
+    this.overHeart = this.overHeart.bind(this);
+    this.exitHeart = this.exitHeart.bind(this);
     this.overArrow = this.overArrow.bind(this);
     this.exitArrow = this.exitArrow.bind(this);
     this.getImages = this.getImages.bind(this);
@@ -47,6 +50,18 @@ class Carousel extends React.Component {
   scrollLeft(){
     this.setState({
       index: (this.state.index === 0) ? this.state.url_fullxfulls.length - 1 : this.state.index - 1,
+    })
+  }
+
+  overHeart(){
+    this.setState({
+      hearthovering: true
+    })
+  }
+
+  exitHeart(){
+    this.setState({
+      hearthovering: false
     })
   }
 
@@ -71,7 +86,7 @@ class Carousel extends React.Component {
 
   toggleImageZoom(){
     console.log('toggle zoom');
-    if(!this.state.lefthovering && !this.state.righthovering){
+    if(!this.state.lefthovering && !this.state.righthovering && !this.state.hearthovering){
       this.setState({
         imageZoom: !this.state.imageZoom
       })
@@ -149,17 +164,18 @@ class Carousel extends React.Component {
     if(this.state.productId){
       return (
         <div className={Style.container}>
-          {!this.state.imageZoom ? null : 
-            <div>
-              <EnlargedImage toggleImageZoom={this.toggleImageZoom} 
-              image_url={this.state.url_fullxfulls[this.state.index]}/>
-            </div>}
+        <EnlargedImage 
+          image_url={this.state.url_fullxfulls[this.state.index]}
+          toggleImageZoom={this.toggleImageZoom}
+          imageZoom={this.state.imageZoom}/>
           <div className={Style.carousel}>
             <Scroller 
               favorited={this.state.favorite}
               imageZoom={this.state.imageZoom}
               lefthovering={this.state.lefthovering}
               righthovering={this.state.righthovering}
+              overHeart={this.overHeart}
+              exitHeart={this.exitHeart}
               overArrow={this.overArrow}
               exitArrow={this.exitArrow}
               scrollLeft={this.scrollLeft}
