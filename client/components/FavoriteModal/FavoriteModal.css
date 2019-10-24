@@ -1,0 +1,14 @@
+.modal {
+  position: fixed;
+  left: 50%;
+  bottom: 1%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  max-width: 100%;
+  height: 30px;
+  background-color: #FECF84;
+  border-color: #FEC775;
+  border-radius: 3%;
+  outline: none;
+}
+
