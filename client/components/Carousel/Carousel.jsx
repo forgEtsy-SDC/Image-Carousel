@@ -12,7 +12,6 @@ import EnlargedImage from '../EnlargedImage/EnlargedImage.jsx'
 class Carousel extends React.Component {
   constructor(props){
     super(props);
-
     this.state = {
       productId: null,
       favorite: null,
@@ -100,8 +99,8 @@ class Carousel extends React.Component {
 
 
   toggleFavorite(){
-    let http = 'http://ec2-18-222-211-24.us-east-2.compute.amazonaws.com/urls/update';
-    // let http = 'http://localhost:3003/urls/update';
+    // let http = 'http://ec2-18-222-211-24.us-east-2.compute.amazonaws.com/urls/update';
+    let http = 'http://localhost:3003/urls/update';
     axios.post(http, {
       params: {
         productId: this.state.productId,
@@ -136,8 +135,8 @@ class Carousel extends React.Component {
   }
 
   getImages(productId){
-    let http = 'http://ec2-18-222-211-24.us-east-2.compute.amazonaws.com/urls';
-    // let http = 'http://localhost:3003/urls/random';
+    // let http = 'http://ec2-18-222-211-24.us-east-2.compute.amazonaws.com/urls';
+    let http = 'http://localhost:3003/urls';
     axios.get(http, {
       params: {
         productId: productId,
