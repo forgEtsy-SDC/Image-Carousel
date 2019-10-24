@@ -27,9 +27,7 @@
 }
 
 .favorited {
-  color: red;
+  fill: #C13C27;
 }
 
-.unfavorited {
-  color: white;
-}
+
