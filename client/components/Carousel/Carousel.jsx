@@ -35,6 +35,7 @@ class Carousel extends React.Component {
     this.exitArrow = this.exitArrow.bind(this);
     this.getImages = this.getImages.bind(this);
     this.scrollLeft = this.scrollLeft.bind(this);
+    this.selectImage = this.selectImage.bind(this);
     this.scrollRight = this.scrollRight.bind(this);
     this.updateLocation = this.updateLocation.bind(this);
     this.toggleFavorite = this.toggleFavorite.bind(this);
@@ -84,8 +85,13 @@ class Carousel extends React.Component {
     })
   }
 
+  selectImage(index){
+    this.setState({
+      index: index
+    })
+  }
+
   toggleImageZoom(){
-    console.log('toggle zoom');
     if(!this.state.lefthovering && !this.state.righthovering && !this.state.hearthovering){
       this.setState({
         imageZoom: !this.state.imageZoom
@@ -184,7 +190,7 @@ class Carousel extends React.Component {
               toggleImageZoom={this.toggleImageZoom}
               url={this.state.url_fullxfulls[this.state.index]}
             />
-            <ImageBar urls={this.state.url_75x75s} index={this.state.index}/>
+            <ImageBar urls={this.state.url_75x75s} index={this.state.index} selectImage={this.selectImage}/>
             <Footer url={this.state.url_avatar}/>
           </div>
         </div>
