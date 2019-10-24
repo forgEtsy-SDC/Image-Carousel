@@ -1,9 +1,9 @@
 import React from 'react';
 import Style from './Thumbnail.css';
 
-const Thumbnail = ({ url, selected }) => {
+const Thumbnail = ({ url, selected, selectImage, index }) => {
     return (
-        <div>
+        <div onClick={()=>selectImage(index)}>
             <img className={selected ? Style.thumbnailselected : Style.thumbnail} src={url}/>
         </div>
     )

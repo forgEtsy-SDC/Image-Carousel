@@ -1,17 +1,19 @@
 import React from 'React';
 import axios from 'axios';
 import faker from 'faker';
-import { match } from 'react-router-dom';
+
 import Style from './Carousel.css';
 
 import Scroller from '../Scroller/Scroller.jsx';
 import ImageBar from '../ImageBar/ImageBar.jsx';
 import Footer from '../Footer/Footer.jsx';
+import EnlargedImage from '../EnlargedImage/EnlargedImage.jsx'
 
 class Carousel extends React.Component {
   constructor(props){
     super(props);
-
+    // not in use for development
+    // this.props.match.params.productId
     this.state = {
       productId: this.props.match.params.productId,
       favorite: null,
@@ -23,14 +25,21 @@ class Carousel extends React.Component {
       index: 0,
       lefthovering: false,
       righthovering: false,
+      hearthovering: false,
+      imageZoom: false,
     }
-    this.scrollRight = this.scrollRight.bind(this);
-    this.scrollLeft = this.scrollLeft.bind(this);
-    this.toggleFavorite = this.toggleFavorite.bind(this);
+    // Bind any functions passed as props to parent
+    this.overHeart = this.overHeart.bind(this);
+    this.exitHeart = this.exitHeart.bind(this);
     this.overArrow = this.overArrow.bind(this);
     this.exitArrow = this.exitArrow.bind(this);
-    this.updateLocation = this.updateLocation.bind(this);
     this.getImages = this.getImages.bind(this);
+    this.scrollLeft = this.scrollLeft.bind(this);
+    this.selectImage = this.selectImage.bind(this);
+    this.scrollRight = this.scrollRight.bind(this);
+    this.updateLocation = this.updateLocation.bind(this);
+    this.toggleFavorite = this.toggleFavorite.bind(this);
+    this.toggleImageZoom = this.toggleImageZoom.bind(this);
   }
 
   scrollRight(){
@@ -42,6 +51,18 @@ class Carousel extends React.Component {
   scrollLeft(){
     this.setState({
       index: (this.state.index === 0) ? this.state.url_fullxfulls.length - 1 : this.state.index - 1,
+    })
+  }
+
+  overHeart(){
+    this.setState({
+      hearthovering: true
+    })
+  }
+
+  exitHeart(){
+    this.setState({
+      hearthovering: false
     })
   }
 
@@ -64,6 +85,21 @@ class Carousel extends React.Component {
     })
   }
 
+  selectImage(index){
+    this.setState({
+      index: index
+    })
+  }
+
+  toggleImageZoom(){
+    if(!this.state.lefthovering && !this.state.righthovering && !this.state.hearthovering){
+      this.setState({
+        imageZoom: !this.state.imageZoom
+      })
+    }
+  }
+
+
   toggleFavorite(){
     let http = 'http://ec2-18-222-211-24.us-east-2.compute.amazonaws.com/urls/update';
     // let http = 'http://localhost:3003/urls/update';
@@ -77,7 +113,6 @@ class Carousel extends React.Component {
       this.setState({
         favorite: !this.state.favorite
       })
-      console.log(data.data.favorite);
     })
     .catch((err) => {
       console.log(err);
@@ -103,7 +138,7 @@ class Carousel extends React.Component {
 
   getImages(productId){
     let http = 'http://ec2-18-222-211-24.us-east-2.compute.amazonaws.com/urls';
-    // let http = 'http://localhost:3003/urls';
+    // let http = 'http://localhost:3003/urls/random';
     axios.get(http, {
       params: {
         productId: productId,
@@ -134,22 +169,30 @@ class Carousel extends React.Component {
     if(this.state.productId){
       return (
         <div className={Style.container}>
-        <div className={Style.carousel}>
-          <Scroller 
-            url={this.state.url_fullxfulls[this.state.index]}
-            scrollLeft={this.scrollLeft}
-            scrollRight={this.scrollRight}
-            toggleFavorite={this.toggleFavorite}
-            overArrow={this.overArrow}
-            exitArrow={this.exitArrow}
-            favorited={this.state.favorite}
-            lefthovering={this.state.lefthovering}
-            righthovering={this.state.righthovering}
-          />
-          <ImageBar urls={this.state.url_75x75s} index={this.state.index}/>
-          <Footer url={this.state.url_avatar}/>
+        <EnlargedImage 
+          image_url={this.state.url_fullxfulls[this.state.index]}
+          toggleImageZoom={this.toggleImageZoom}
+          imageZoom={this.state.imageZoom}/>
+          <div className={Style.carousel}>
+            <Scroller 
+              favorited={this.state.favorite}
+              imageZoom={this.state.imageZoom}
+              lefthovering={this.state.lefthovering}
+              righthovering={this.state.righthovering}
+              overHeart={this.overHeart}
+              exitHeart={this.exitHeart}
+              overArrow={this.overArrow}
+              exitArrow={this.exitArrow}
+              scrollLeft={this.scrollLeft}
+              scrollRight={this.scrollRight}
+              toggleFavorite={this.toggleFavorite}
+              toggleImageZoom={this.toggleImageZoom}
+              url={this.state.url_fullxfulls[this.state.index]}
+            />
+            <ImageBar urls={this.state.url_75x75s} index={this.state.index} selectImage={this.selectImage}/>
+            <Footer url={this.state.url_avatar}/>
+          </div>
         </div>
-      </div>
     )
   }else{
     return (
