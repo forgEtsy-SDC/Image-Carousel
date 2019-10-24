@@ -1,4 +1,5 @@
 import React from 'react';
+import Style from './MainImage.css'
 
 import Arrow from '../Arrow/Arrow.jsx';
 import Heart from '../Heart/Heart.jsx';
@@ -6,20 +7,9 @@ import Heart from '../Heart/Heart.jsx';
 const MainImage = ({ url, scrollLeft, scrollRight, overHeart,
                     toggleFavorite, favorited, overArrow, exitHeart,
                     exitArrow, lefthovering, righthovering }) => {
-    const style = {
-        display: 'grid',
-        gridTemplateRows: '50px 1fr 50px',
-        gridTemplateColumns: '1fr 1fr',
-        backgroundImage: `url(${url})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'contain',
-        backgroundPosition: 'center',
-        width: '100%',
-        maxHeight: '100%',
-    }
-    
+
     return (
-        <div style={style}>
+        <div className={Style.mainimage} style={{ backgroundImage: `url(${url})`}}>
             {<Heart 
                 toggleFavorite={toggleFavorite} 
                 favorited={favorited}

@@ -5,9 +5,6 @@ import ReactModal from 'react-modal';
 ReactModal.setAppElement('body')
 
 const EnlargedImage = ({toggleImageZoom, image_url, imageZoom}) => {
-  const style = {
-    backgroundImage: `url(${image_url})`
-  }
   return (
     <div>
       <ReactModal 
@@ -16,7 +13,7 @@ const EnlargedImage = ({toggleImageZoom, image_url, imageZoom}) => {
         shouldCloseOnOverlayClick={true}
         className={Style.modal}
       >
-        <div className={Style.wrapper} style={style} onClick={toggleImageZoom}>
+        <div className={Style.wrapper} style={{backgroundImage: `url(${image_url})`}} onClick={toggleImageZoom}>
           <button className={Style.button} onClick={toggleImageZoom}>X</button>
         </div>
       </ReactModal>
