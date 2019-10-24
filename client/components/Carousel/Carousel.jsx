@@ -12,10 +12,9 @@ import EnlargedImage from '../EnlargedImage/EnlargedImage.jsx'
 class Carousel extends React.Component {
   constructor(props){
     super(props);
-    // not in use for development
-    // this.props.match.params.productId
+
     this.state = {
-      productId: this.props.match.params.productId,
+      productId: null,
       favorite: null,
       url_avatar: null,
       url_75x75s: [],
@@ -129,7 +128,7 @@ class Carousel extends React.Component {
 
   componentDidMount(){
     window.addEventListener('click', this.updateLocation);
-    this.getImages(this.state.productId);
+    this.getImages(this.props.match.params.productId);
   }
 
   componentWillUnmount(){
@@ -177,8 +176,6 @@ class Carousel extends React.Component {
             <Scroller 
               favorited={this.state.favorite}
               imageZoom={this.state.imageZoom}
-              lefthovering={this.state.lefthovering}
-              righthovering={this.state.righthovering}
               overHeart={this.overHeart}
               exitHeart={this.exitHeart}
               overArrow={this.overArrow}
