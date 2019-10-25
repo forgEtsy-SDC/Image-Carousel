@@ -99,11 +99,7 @@ class Carousel extends React.Component {
 
 
   toggleFavorite(){
-<<<<<<< Updated upstream
-    // let http = 'http://ec2-18-222-211-24.us-east-2.compute.amazonaws.com/urls/update';
-=======
     // let http = 'http://ec2-18-219-198-117.us-east-2.compute.amazonaws.com/urls/update';
->>>>>>> Stashed changes
     let http = 'http://localhost:3003/urls/update';
     axios.post(http, {
       params: {
@@ -139,13 +135,8 @@ class Carousel extends React.Component {
   }
 
   getImages(productId){
-<<<<<<< Updated upstream
-    // let http = 'http://ec2-18-222-211-24.us-east-2.compute.amazonaws.com/urls';
-    let http = 'http://localhost:3003/urls';
-=======
     // let http = 'http://ec2-18-219-198-117.us-east-2.compute.amazonaws.com/urls';
     let http = 'http://localhost:3003/urls/random';
->>>>>>> Stashed changes
     axios.get(http, {
       params: {
         productId: productId,
@@ -201,7 +192,7 @@ class Carousel extends React.Component {
     )
   }else{
     return (
-      <div><h2>No product selected... or landing page... whatever</h2></div>
+      <div className={Style.carousel}><h2>No product selected... or landing page... whatever</h2></div>
     )
   }
   }
