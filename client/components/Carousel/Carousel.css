@@ -1,8 +1,8 @@
 .container {
   display: grid;
-  max-width: 70%;
-  width: auto;
+  width: 100%;
   justify-items: center;
+  margin: 0% 5%;
 }
 
 .carousel {

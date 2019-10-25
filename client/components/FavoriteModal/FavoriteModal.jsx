@@ -4,7 +4,7 @@ import Style from './FavoriteModal.css'
 
 ReactModal.setAppElement('body');
 
-const FavoriteModal = ({ favorited, unfavorited, fadeout }) => {
+const FavoriteModal = ({ favorited, unfavorited, }) => {
   if(favorited || unfavorited){
     return (
       <div className={Style.modal}>

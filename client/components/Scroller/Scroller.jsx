@@ -6,9 +6,9 @@ const Scroller = ({ url, scrollLeft, scrollRight, exitHeart,
                     toggleFavorite, favorited, overArrow, overHeart,
                     exitArrow, lefthovering, righthovering, toggleImageZoom }) => {
     return (
-        <div className={Style.scroller} onClick={toggleImageZoom}>
+        <div className={Style.scroller} onClick={toggleImageZoom} style={{ backgroundImage: `url(${url})`}}>
             {<MainImage 
-                url={url} 
+                // url = {url}
                 scrollLeft={scrollLeft} 
                 scrollRight={scrollRight} 
                 toggleFavorite={toggleFavorite}

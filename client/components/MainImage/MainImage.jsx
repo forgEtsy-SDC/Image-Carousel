@@ -9,7 +9,7 @@ const MainImage = ({ url, scrollLeft, scrollRight, overHeart,
                     exitHeart, exitArrow}) => {
 
     return (
-        <div className={Style.mainimage} style={{ backgroundImage: `url(${url})`}}>
+        <div className={Style.mainimage}>
             {<Heart 
                 toggleFavorite={toggleFavorite} 
                 favorited={favorited}

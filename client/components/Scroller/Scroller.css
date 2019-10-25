@@ -4,5 +4,18 @@
     grid-template-columns: minmax(480px, 700px);
     justify-items: center;
     cursor: zoom-in; 
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 

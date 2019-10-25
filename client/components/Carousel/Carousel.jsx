@@ -120,16 +120,9 @@ class Carousel extends React.Component {
         }, () => {
           setTimeout(()=> {
             this.setState({
-              fadeout: true
-            }, ()=> {
-              setTimeout(() => {
-                this.setState({
-                  unfavoriteModal: false,
-                  fadeout: false
-                })
-              }, 700);
+              unfavoriteModal: false
             })
-          }, 2000);
+          }, 2700);
         })
       }else{
         this.setState({
@@ -138,16 +131,9 @@ class Carousel extends React.Component {
         }, () => {
             setTimeout(()=>{
               this.setState({
-              fadeout: true
-            }, () => {
-              setTimeout(() => {
-                this.setState({
-                  favoriteModal: false,
-                  fadeout: false
-                })
-              }, 700)
+              favoriteModal: false
             })
-          }, 2000)
+          }, 2700)
         })
       }
     })
@@ -211,7 +197,6 @@ class Carousel extends React.Component {
           toggleImageZoom={this.toggleImageZoom}
           imageZoom={this.state.imageZoom}/>
         <FavoriteModal
-          fadeout={this.state.fadout}
           favorited={this.state.favoriteModal}
           unfavorited={this.state.unfavoriteModal}/>
           <div className={Style.carousel}>
