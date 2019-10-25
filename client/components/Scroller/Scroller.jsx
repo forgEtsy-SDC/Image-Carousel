@@ -8,7 +8,7 @@ const Scroller = ({ url, scrollLeft, scrollRight, exitHeart,
     return (
         <div className={Style.scroller} onClick={toggleImageZoom}>
             {<MainImage 
-                url={url} 
+                url = {url}
                 scrollLeft={scrollLeft} 
                 scrollRight={scrollRight} 
                 toggleFavorite={toggleFavorite}

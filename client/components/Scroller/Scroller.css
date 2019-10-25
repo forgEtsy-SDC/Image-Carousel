@@ -1,8 +1,9 @@
 .scroller {
     display: grid;
     grid-template-rows: 480px;
-    grid-template-columns: minmax(480px, 700px);
+    grid-template-columns: minmax(auto, 700px);
     justify-items: center;
-    cursor: zoom-in; 
+    cursor: zoom-in;
 }
+
 

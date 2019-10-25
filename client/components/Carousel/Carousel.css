@@ -1,7 +1,6 @@
 .container {
   display: grid;
-  max-width: 70%;
-  width: auto;
+  width: 100%;
   justify-items: center;
 }
 
@@ -9,5 +8,6 @@
   display: grid;
   grid-template-rows: minmax(240px, 480px) 85px 85px;
   justify-items: center;
+  margin: 0% 5%;
 }
 

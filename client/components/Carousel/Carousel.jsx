@@ -28,6 +28,7 @@ class Carousel extends React.Component {
       imageZoom: false,
       favoriteModal: false,
       unfavoriteModal: false,
+      fadout: false,
     }
     // Bind any functions passed as props to parent
     this.overHeart = this.overHeart.bind(this);
@@ -121,7 +122,7 @@ class Carousel extends React.Component {
             this.setState({
               unfavoriteModal: false
             })
-          }, 2000);
+          }, 2700);
         })
       }else{
         this.setState({
@@ -132,7 +133,7 @@ class Carousel extends React.Component {
               this.setState({
               favoriteModal: false
             })
-          }, 2000)
+          }, 2700)
         })
       }
     })
@@ -216,12 +217,16 @@ class Carousel extends React.Component {
             <Footer url={this.state.url_avatar}/>
           </div>
         </div>
-    )
-  }else{
-    return (
-      <div><h2>No product selected... or landing page... whatever</h2></div>
-    )
-  }
+      )
+    }else{
+      return (
+        <div className={Style.container}>
+          <div className={Style.carousel}>
+            <h2>Loading...</h2>
+          </div>
+        </div>
+      )
+    }
   }
 }
 

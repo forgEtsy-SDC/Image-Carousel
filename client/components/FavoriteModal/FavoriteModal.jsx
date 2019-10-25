@@ -4,19 +4,19 @@ import Style from './FavoriteModal.css'
 
 ReactModal.setAppElement('body');
 
-const FavoriteModal = ({ favorited, unfavorited }) => {
+const FavoriteModal = ({ favorited, unfavorited, }) => {
   if(favorited || unfavorited){
     return (
       <div className={Style.modal}>
-        {favorited ?
+        {favorited ? (
           <div className={Style.favorite}>
             <p>&#10004; Favorited</p>
           </div> 
-          :
+        ) : (
           <div className={Style.unfavorite}>
             <p>Removed from favorites</p>
           </div>
-        }
+        )}
         {favorited && <p className={Style.add}>Add to list</p>}
       </div>
     )
