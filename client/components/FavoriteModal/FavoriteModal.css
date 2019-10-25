@@ -5,7 +5,7 @@
   grid-template-columns: 50% 50%;
   align-items: center;
   left: 50%;
-  bottom: 1%;
+  bottom: 0.5%;
   transform: translate(-50%, -50%);
   width: 50%;
   min-width: 400px;
@@ -20,6 +20,28 @@
   -moz-box-shadow: 0 0 5px  rgba(0,0,0,0.1);
   -webkit-box-shadow: 0 0 5px  rgba(0,0,0,0.1);
   -o-box-shadow: 0 0 5px  rgba(0,0,0,0.1);
+  overflow-y: hidden;
+  animation-name: popup, fadeout;
+  animation-duration: 0.3s, 1s;
+  animation-delay: 0s, 2s;
+}
+
+@keyframes popup {
+  from {
+    bottom: -2%;
+  }
+  to {
+    bottom: 0.5%;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1
+  }
+  to{
+    opacity: 0;
+  }
 }
 
 .favorite{

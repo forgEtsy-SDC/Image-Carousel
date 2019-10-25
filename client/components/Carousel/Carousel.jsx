@@ -28,6 +28,7 @@ class Carousel extends React.Component {
       imageZoom: false,
       favoriteModal: false,
       unfavoriteModal: false,
+      fadout: false,
     }
     // Bind any functions passed as props to parent
     this.overHeart = this.overHeart.bind(this);
@@ -119,7 +120,14 @@ class Carousel extends React.Component {
         }, () => {
           setTimeout(()=> {
             this.setState({
-              unfavoriteModal: false
+              fadeout: true
+            }, ()=> {
+              setTimeout(() => {
+                this.setState({
+                  unfavoriteModal: false,
+                  fadeout: false
+                })
+              }, 700);
             })
           }, 2000);
         })
@@ -130,7 +138,14 @@ class Carousel extends React.Component {
         }, () => {
             setTimeout(()=>{
               this.setState({
-              favoriteModal: false
+              fadeout: true
+            }, () => {
+              setTimeout(() => {
+                this.setState({
+                  favoriteModal: false,
+                  fadeout: false
+                })
+              }, 700)
             })
           }, 2000)
         })
@@ -196,6 +211,7 @@ class Carousel extends React.Component {
           toggleImageZoom={this.toggleImageZoom}
           imageZoom={this.state.imageZoom}/>
         <FavoriteModal
+          fadeout={this.state.fadout}
           favorited={this.state.favoriteModal}
           unfavorited={this.state.unfavoriteModal}/>
           <div className={Style.carousel}>
@@ -216,12 +232,16 @@ class Carousel extends React.Component {
             <Footer url={this.state.url_avatar}/>
           </div>
         </div>
-    )
-  }else{
-    return (
-      <div className={Style.carousel}><h2>No product selected... or landing page... whatever</h2></div>
-    )
-  }
+      )
+    }else{
+      return (
+        <div className={Style.container}>
+          <div className={Style.carousel}>
+            <h2>Loading...</h2>
+          </div>
+        </div>
+      )
+    }
   }
 }
 
