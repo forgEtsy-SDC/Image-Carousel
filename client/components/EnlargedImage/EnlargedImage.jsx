@@ -13,7 +13,8 @@ const EnlargedImage = ({toggleImageZoom, image_url, imageZoom}) => {
         shouldCloseOnOverlayClick={true}
         className={Style.modal}
       >
-        <div className={Style.wrapper} style={{backgroundImage: `url(${image_url})`}} onClick={toggleImageZoom}>
+        <div className={Style.wrapper} onClick={toggleImageZoom}>
+          <img className={Style.image} src={image_url}/>
           <button className={Style.button} onClick={toggleImageZoom}>X</button>
         </div>
       </ReactModal>
@@ -22,3 +23,5 @@ const EnlargedImage = ({toggleImageZoom, image_url, imageZoom}) => {
 }
 
 export default EnlargedImage;
+
+//style={{backgroundImage: `url(${image_url})`}}
