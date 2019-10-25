@@ -4,10 +4,11 @@ import faker from 'faker';
 
 import Style from './Carousel.css';
 
+import Footer from '../Footer/Footer.jsx';
 import Scroller from '../Scroller/Scroller.jsx';
 import ImageBar from '../ImageBar/ImageBar.jsx';
-import Footer from '../Footer/Footer.jsx';
 import EnlargedImage from '../EnlargedImage/EnlargedImage.jsx'
+import FavoriteModal from '../FavoriteModal/FavoriteModal.jsx';
 
 class Carousel extends React.Component {
   constructor(props){
@@ -25,6 +26,8 @@ class Carousel extends React.Component {
       righthovering: false,
       hearthovering: false,
       imageZoom: false,
+      favoriteModal: false,
+      unfavoriteModal: false,
     }
     // Bind any functions passed as props to parent
     this.overHeart = this.overHeart.bind(this);
@@ -108,9 +111,30 @@ class Carousel extends React.Component {
       }
     })
     .then((data) => {
-      this.setState({
-        favorite: !this.state.favorite
-      })
+      if(this.state.favorite){
+        // If CURRENTLY favorited, we are UN-favoriting now
+        this.setState({
+          favorite: !this.state.favorite,
+          unfavoriteModal: true
+        }, () => {
+          setTimeout(()=> {
+            this.setState({
+              unfavoriteModal: false
+            })
+          }, 2000);
+        })
+      }else{
+        this.setState({
+          favorite: !this.state.favorite,
+          favoriteModal: true
+        }, () => {
+            setTimeout(()=>{
+              this.setState({
+              favoriteModal: false
+            })
+          }, 2000)
+        })
+      }
     })
     .catch((err) => {
       console.log(err);
@@ -171,6 +195,9 @@ class Carousel extends React.Component {
           image_url={this.state.url_fullxfulls[this.state.index]}
           toggleImageZoom={this.toggleImageZoom}
           imageZoom={this.state.imageZoom}/>
+        <FavoriteModal
+          favorited={this.state.favoriteModal}
+          unfavorited={this.state.unfavoriteModal}/>
           <div className={Style.carousel}>
             <Scroller 
               favorited={this.state.favorite}
