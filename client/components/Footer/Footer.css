@@ -27,6 +27,7 @@
 .contact {
   font-weight: bold;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .responsetime {
