@@ -1,4 +1,15 @@
+.selected {
+    justify-self: center;
+    margin: 3px;
+}
+
 .thumbnail {
     justify-self: center;
     margin: 3px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.thumbnail:hover{
+    opacity: 1;
 }
