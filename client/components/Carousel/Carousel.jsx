@@ -18,8 +18,6 @@ class Carousel extends React.Component {
       favorite: null,
       url_avatar: null,
       url_75x75s: [],
-      url_170x135s: [],
-      url_570xNs: [],
       url_fullxfulls: [],
       index: 0,
       lefthovering: false,
@@ -28,7 +26,6 @@ class Carousel extends React.Component {
       imageZoom: false,
       favoriteModal: false,
       unfavoriteModal: false,
-      fadout: false,
     }
     // Bind any functions passed as props to parent
     this.overHeart = this.overHeart.bind(this);
@@ -171,10 +168,8 @@ class Carousel extends React.Component {
       this.setState({
         productId: data.productId,
         favorite: data.favorite,
-        url_75x75s: data.seventyFives,
-        url_170x135s: data.oneSeventies,
-        url_570xNs: data.fiveSeventies,
-        url_fullxfulls: data.fulls,
+        url_75x75s: data.seventyFives.slice(0, 8),
+        url_fullxfulls: data.fulls.slice(0, 8),
         url_avatar: faker.image.avatar()
       })
     })
