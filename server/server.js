@@ -66,6 +66,8 @@ const saveUrls = (urls) => {
   }
   state.productId = urls[0].listing_id;
   state.favorite = urls[0].favorite;
+  state.shop = urls[0].Shop.shop_name;
+  state.shopId = urls[0].Shop.shop_id;
   return state;
 }
 
