@@ -9,6 +9,7 @@
   outline: none;
   justify-items: center;
   align-content: center;
+  z-index: 20;
 }
 
 .wrapper {

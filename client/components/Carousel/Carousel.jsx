@@ -7,6 +7,7 @@ import Style from './Carousel.css';
 import Footer from '../Footer/Footer.jsx';
 import Scroller from '../Scroller/Scroller.jsx';
 import ImageBar from '../ImageBar/ImageBar.jsx';
+import SellerModal from '../SellerModal/SellerModal.jsx';
 import EnlargedImage from '../EnlargedImage/EnlargedImage.jsx'
 import FavoriteModal from '../FavoriteModal/FavoriteModal.jsx';
 
@@ -19,6 +20,8 @@ class Carousel extends React.Component {
       url_avatar: null,
       url_75x75s: [],
       url_fullxfulls: [],
+      seller: null,
+      shop: null,
       index: 0,
       lefthovering: false,
       righthovering: false,
@@ -26,6 +29,7 @@ class Carousel extends React.Component {
       imageZoom: false,
       favoriteModal: false,
       unfavoriteModal: false,
+      sellerModal: false,
     }
     // Bind any functions passed as props to parent
     this.overHeart = this.overHeart.bind(this);
@@ -39,6 +43,7 @@ class Carousel extends React.Component {
     this.updateLocation = this.updateLocation.bind(this);
     this.toggleFavorite = this.toggleFavorite.bind(this);
     this.toggleImageZoom = this.toggleImageZoom.bind(this);
+    this.toggleSellerModal = this.toggleSellerModal.bind(this);
   }
 
   scrollRight(){
@@ -98,6 +103,11 @@ class Carousel extends React.Component {
     }
   }
 
+  toggleSellerModal(){
+    this.setState({
+      sellerModal: !this.state.sellerModal
+    })
+  }
 
   toggleFavorite(){
     let http = 'http://ec2-18-219-198-117.us-east-2.compute.amazonaws.com/urls/update';
@@ -165,12 +175,15 @@ class Carousel extends React.Component {
       }
     })
     .then(({ data }) => {
+      faker.seed(data.shopId)
       this.setState({
         productId: data.productId,
         favorite: data.favorite,
         url_75x75s: data.seventyFives.slice(0, 8),
         url_fullxfulls: data.fulls.slice(0, 8),
-        url_avatar: faker.image.avatar()
+        url_avatar: faker.fake("{{image.avatar}}"),
+        seller: faker.fake("{{name.firstName}}"),
+        shop: data.shop
       })
     })
     .catch((err) => {
@@ -194,6 +207,12 @@ class Carousel extends React.Component {
         <FavoriteModal
           favorited={this.state.favoriteModal}
           unfavorited={this.state.unfavoriteModal}/>
+        <SellerModal 
+          shop={this.state.shop}
+          seller={this.state.seller}
+          url={this.state.url_avatar} 
+          display={this.state.sellerModal}
+          toggleSellerModal={this.toggleSellerModal}/>
           <div className={Style.carousel}>
             <Scroller 
               favorited={this.state.favorite}
@@ -209,7 +228,9 @@ class Carousel extends React.Component {
               url={this.state.url_fullxfulls[this.state.index]}
             />
             <ImageBar urls={this.state.url_75x75s} index={this.state.index} selectImage={this.selectImage}/>
-            <Footer url={this.state.url_avatar}/>
+            <Footer url={this.state.url_avatar} 
+                    display={this.state.sellerModal}
+                    toggleSellerModal={this.toggleSellerModal}/>
           </div>
         </div>
       )

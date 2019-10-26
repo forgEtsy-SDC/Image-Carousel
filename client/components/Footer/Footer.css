@@ -30,6 +30,10 @@
   cursor: pointer;
 }
 
+.contact:hover{
+  color: grey;
+}
+
 .responsetime {
   font-weight: bold;
 }

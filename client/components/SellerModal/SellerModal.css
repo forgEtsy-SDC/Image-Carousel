@@ -1,0 +1,119 @@
+.sellermodal {
+  font-family: 'Gentium Basic', serif;
+  font-size: 12px;
+  position: fixed;
+  display: grid;
+  grid-template-rows: 65px 180px 30px;
+  flex-direction: column;
+  align-content: center;
+  width: 300px;
+  height: 290px;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  border-radius: 4%;
+  z-index: 5;
+  background-color: white;
+  border-color: 2px solid grey; 
+  box-shadow:  0 0 5px  rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 5px  rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 0 5px  rgba(0,0,0,0.3);
+  -o-box-shadow: 0 0 5px  rgba(0,0,0,0.3);
+  animation-name: popup;
+  animation-duration: 0.7s;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  justify-content: center;
+  padding: 5px;
+  border-bottom: 1px solid #E1E3DF;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.seller {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.shop:hover {
+  cursor: pointer;
+  color:grey;
+}
+
+.avatar {
+  display: block;
+  justify-self: center;
+  align-self: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.button {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.button:hover{
+  fill: grey;
+}
+
+.question {
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid #E1E3DF;
+  padding: 0px 18px 18px 18px;
+}
+
+.submit {
+  display: grid;
+  grid-template-columns: 1fr 30px 30px;
+  margin: 0px 5px;
+  align-items: center;
+}
+
+.imageicon {
+  margin: 5px;
+  grid-column-start: 2;
+  cursor: pointer;
+}
+
+.form {
+  outline: none;
+}
+
+.enter {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  grid-column-start: 3;
+  border-radius: 50%;
+  background-color: black;
+  fill: white;
+  cursor: pointer;
+}
+
+@keyframes popup {
+  from {
+    bottom: -35%;
+  }
+  to {
+    bottom: 0;
+  }
+}
