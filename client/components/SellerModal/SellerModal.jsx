@@ -5,7 +5,7 @@ import ReactModal from 'react-modal';
 
 ReactModal.setAppElement('body')
 
-const SellerModal = ({ seller, shop, url, display, toggleSellerModal }) => {
+const SellerModal = ({ seller, shop, url, display, message, toggleSellerModal, readyMessage, updateSellerMessage }) => {
   if(display){
       return (
       <div className={Style.sellermodal}>
@@ -31,7 +31,9 @@ const SellerModal = ({ seller, shop, url, display, toggleSellerModal }) => {
         </div>
         <div className={Style.submit}>
           <div>
-            Write a message
+            <form>
+              <input type="text" onClick={readyMessage} onChange={updateSellerMessage} className={Style.input} value={message}></input>
+            </form>
           </div>
           <div className={Style.imageicon}>
             <span>

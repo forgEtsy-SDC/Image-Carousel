@@ -30,6 +30,7 @@ class Carousel extends React.Component {
       favoriteModal: false,
       unfavoriteModal: false,
       sellerModal: false,
+      sellerMessage: 'Write a message'
     }
     // Bind any functions passed as props to parent
     this.overHeart = this.overHeart.bind(this);
@@ -40,10 +41,12 @@ class Carousel extends React.Component {
     this.scrollLeft = this.scrollLeft.bind(this);
     this.selectImage = this.selectImage.bind(this);
     this.scrollRight = this.scrollRight.bind(this);
+    this.readyMessage = this.readyMessage.bind(this);
     this.updateLocation = this.updateLocation.bind(this);
     this.toggleFavorite = this.toggleFavorite.bind(this);
     this.toggleImageZoom = this.toggleImageZoom.bind(this);
     this.toggleSellerModal = this.toggleSellerModal.bind(this);
+    this.updateSellerMessage = this.updateSellerMessage.bind(this);
   }
 
   scrollRight(){
@@ -95,6 +98,18 @@ class Carousel extends React.Component {
     })
   }
 
+  updateSellerMessage(e){
+      this.setState({
+        sellerMessage: e.target.value
+      })
+  }
+
+  readyMessage(){
+    this.setState({
+      sellerMessage: ''
+    })
+  }
+
   toggleImageZoom(){
     if(!this.state.lefthovering && !this.state.righthovering && !this.state.hearthovering){
       this.setState({
@@ -105,7 +120,8 @@ class Carousel extends React.Component {
 
   toggleSellerModal(){
     this.setState({
-      sellerModal: !this.state.sellerModal
+      sellerModal: !this.state.sellerModal,
+      sellerMessage: 'Write a message'
     })
   }
 
@@ -212,7 +228,11 @@ class Carousel extends React.Component {
           seller={this.state.seller}
           url={this.state.url_avatar} 
           display={this.state.sellerModal}
-          toggleSellerModal={this.toggleSellerModal}/>
+          message={this.state.sellerMessage}
+          readyMessage={this.readyMessage}
+          toggleSellerModal={this.toggleSellerModal}
+          updateSellerMessage={this.updateSellerMessage}
+          />
           <div className={Style.carousel}>
             <Scroller 
               favorited={this.state.favorite}
