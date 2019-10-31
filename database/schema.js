@@ -52,6 +52,7 @@ const Products = mongoose.model('Products', productSchema);
 const productsSave = products => {
   Products.insertMany(products)
     .then((data) => {
+      // TODO: Replace console logs
       console.log('...Saved products to database...')
     })
     .catch((err) => {
@@ -75,7 +76,7 @@ const seedDatabase = () => {
   })
 }
 
-// Default all products to unfavorited
+// TODO: Remove this?
 const setFavoritesAndSave = (products) => {
   for(let i = 0; i < products.length; i++){
     products[i].favorite = false;
