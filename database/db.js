@@ -10,10 +10,30 @@ mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.connect(`mongodb://${port}:27017/products`)
 
+// Multiple db connections
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+const db2 = mongoose.connection;
+const db3 = mongoose.connection;
+const db4 = mongoose.connection;
+// Multiple db connections
+db.on('error', console.error.bind(console, 'db1 connection error:'));
 db.once('open', function() {
-  console.log(`database connected!`)
+  console.log(`db1 connected!`)
+  seedDatabase();
+})
+db2.on('error', console.error.bind(console, 'db2 connection error:'));
+db2.once('open', function() {
+  console.log(`db2 connected!`)
+  seedDatabase();
+})
+db3.on('error', console.error.bind(console, 'db3 connection error:'));
+db3.once('open', function() {
+  console.log(`db3 connected!`)
+  seedDatabase();
+})
+db4.on('error', console.error.bind(console, 'db4 connection error:'));
+db4.once('open', function() {
+  console.log(`db4 connected!`)
   seedDatabase();
 })
 
