@@ -24,17 +24,14 @@ db.once('open', function() {
 db2.on('error', console.error.bind(console, 'db2 connection error:'));
 db2.once('open', function() {
   console.log(`db2 connected!`)
-  seedDatabase();
 })
 db3.on('error', console.error.bind(console, 'db3 connection error:'));
 db3.once('open', function() {
   console.log(`db3 connected!`)
-  seedDatabase();
 })
 db4.on('error', console.error.bind(console, 'db4 connection error:'));
 db4.once('open', function() {
   console.log(`db4 connected!`)
-  seedDatabase();
 })
 
 const getImageUrls = (productId, callback) => {

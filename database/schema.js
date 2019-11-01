@@ -67,21 +67,13 @@ const seedDatabase = () => {
         console.log('error counting')
       }else{
         if(count === 0){
-          setFavoritesAndSave(jewelry.results);
-          setFavoritesAndSave(housewares.results);
-          setFavoritesAndSave(accessories.results);
-          setFavoritesAndSave(toys.results);
+          productsSave(jewelry.results);
+          productsSave(housewares.results);
+          productsSave(accessories.results);
+          productsSave(toys.results);
       }
     }
   })
-}
-
-// TODO: Remove this?
-const setFavoritesAndSave = (products) => {
-  for(let i = 0; i < products.length; i++){
-    products[i].favorite = false;
-  }
-  productsSave(products);
 }
 
 module.exports.seedDatabase = seedDatabase;
