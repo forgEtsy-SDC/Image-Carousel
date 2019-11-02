@@ -46,31 +46,26 @@ const categoryPathHelper = () => {
   return categoryPaths;
 }
 
-const makeToysData = () => {
-  let outputObj = {};
-  outputObj.results = [];
-  for(let i = 107500001; i <= 110000000; i++) {
-    outputObj.results.push({
-      listing_id: i,
-      title: faker.commerce.productName(),
-      description: faker.company.catchPhrase(),
-      price: faker.commerce.price(),
-      favorite: faker.random.boolean(),
-      category_path: categoryPathHelper(),
-      product_options: optionsHelper(),
-      Images: imagesHelper(i),
-      Shop: {
-        shop_id: faker.random.number({min:100000, max:5000000}),
-        shop_name: faker.company.companyName(),
-        title: faker.company.companyName(),
-        icon_url_fullxfull: faker.image.avatar()
-      }
-    });
-  }
-  return outputObj;
+const makeToy = (i) => {
+  return JSON.stringify({
+    listing_id: i,
+    title: faker.commerce.productName(),
+    description: faker.company.catchPhrase(),
+    price: faker.commerce.price(),
+    favorite: faker.random.boolean(),
+    category_path: categoryPathHelper(),
+    product_options: optionsHelper(),
+    Images: imagesHelper(i),
+    Shop: {
+      shop_id: faker.random.number({min:100000, max:5000000}),
+      shop_name: faker.company.companyName(),
+      title: faker.company.companyName(),
+      icon_url_fullxfull: faker.image.avatar()
+    }
+  })
 }
 
-module.exports = makeToysData();
+module.exports = { makeToy };
 
 // module.exports = {
 //     "results": [

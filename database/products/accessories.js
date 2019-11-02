@@ -46,31 +46,28 @@ const categoryPathHelper = () => {
   return categoryPaths;
 }
 
-const makeAccessoryData = () => {
-  let outputObj = {};
-  outputObj.results = [];
-  for(let i = 102500001; i <= 105000000; i++) {
-    outputObj.results.push({
-      listing_id: i,
-      title: faker.commerce.productName(),
-      description: faker.company.catchPhrase(),
-      price: faker.commerce.price(),
-      favorite: faker.random.boolean(),
-      category_path: categoryPathHelper(),
-      product_options: optionsHelper(),
-      Images: imagesHelper(i),
-      Shop: {
-        shop_id: faker.random.number({min:100000, max:5000000}),
-        shop_name: faker.company.companyName(),
-        title: faker.company.companyName(),
-        icon_url_fullxfull: faker.image.avatar()
-      }
-    });
+const makeAccessory = (i) => {
+  return {
+    listing_id: i,
+    title: faker.commerce.productName(),
+    description: faker.company.catchPhrase(),
+    price: faker.commerce.price(),
+    favorite: faker.random.boolean(),
+    category_path: categoryPathHelper(),
+    product_options: optionsHelper(),
+    Images: imagesHelper(i),
+    Shop: {
+      shop_id: faker.random.number({min:100000, max:5000000}),
+      shop_name: faker.company.companyName(),
+      title: faker.company.companyName(),
+      icon_url_fullxfull: faker.image.avatar()
+    }
   }
-  return outputObj;
 }
 
-module.exports = makeAccessoryData();
+console.log(makeAccessory(20000000))
+
+module.exports = { makeAccessory }
 
 // module.exports = {
 //   "count": 50100,

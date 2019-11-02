@@ -75,7 +75,7 @@ app.get("*", (req, res) => {
 })
 
 // Exports
-module.exports.port = port;
+// module.exports.port = port;
 
 // Listening
 app.listen(port, () => {
