@@ -3,10 +3,8 @@ const debug = require('debug')('debugger');
 const fs = require('fs');
 
 // Import product files
-const makeProduct = require('./products/jewelry.js');
-// const housewares = require('./products/housewares.js');
-// const accessories = require('./products/accessories.js');
-// const toys = require('./products/toys.js');
+// const makeProduct = require('./products/mongoData.js');
+const makeSQLProduct = require('./products/postgreData.js');
 
 // Set up schemas for database 'products'
 const imagesSchema = new mongoose.Schema({
@@ -50,83 +48,90 @@ const productSchema = new mongoose.Schema({
 
 const Products = mongoose.model('Products', productSchema);
 
-// Saves array of products to database
-// const productsSave = products => {
-//   Products.insertMany(products)
-//     .then((data) => {
-//       // TODO: Replace console logs
-//       console.log('...Saved products to database...')
-//     })
-//     .catch((err) => {
-//       console.log('...product saving err... :(', err);
-//     })
+// const makeDatabaseSeederFile1 = () => {
+//   const writeStream = fs.createWriteStream('carouselProducts1.json');
+//   let insertCount = 0;
+//   let itemCount = 100000000;
+//   let createProducts = () => {
+//     for (let i = 1; i <= 100000; i++) {
+//       itemCount++;
+//       writeStream.write(JSON.stringify(makeProduct.makeFakeProduct(itemCount)));
+//       insertCount++;
+//     }
+//     debug(`Wrote ${insertCount} items to 1`);
+
+//   }
+//   while(insertCount < 5000000) {
+//     createProducts();
+//   }
+//   debug('done with 1')
+//   writeStream.end();
 // }
 
-// Seed database with product items if empty
-const makeDatabaseSeederFile = () => {
-  const writeStream = fs.createWriteStream('carouselProducts.json');
+// makeDatabaseSeederFile1();
+
+// const makeDatabaseSeederFile2 = () => {
+//   const writeStream = fs.createWriteStream('carouselProducts2.json');
+//   let insertCount = 0;
+//   let itemCount = 105000001;
+//   let createProducts = () => {
+//     for (let i = 1; i <= 100000; i++) {
+//       itemCount++;
+//       writeStream.write(JSON.stringify(makeProduct.makeFakeProduct(itemCount)));
+//       insertCount++;
+//     }
+//     debug(`Wrote ${insertCount} items to 2`);
+
+//   }
+//   while(insertCount < 5000000) {
+//     createProducts();
+//   }
+//   debug('done with 2')
+//   writeStream.end();
+// }
+
+// makeDatabaseSeederFile2();
+
+const makeSQLProductDatabaseSeederFile = () => {
+  const writeStream = fs.createWriteStream('carouselProducts3.csv');
+  const headerProduct = "listing_id,title,description,price,favorited,shop_id,shop_name,shop_title,shop_icon\n";
+  writeStream.write(headerProduct);
   let insertCount = 0;
   let itemCount = 100000000;
-  let createProducts = () => {
+  let createSQLProducts = () => {
     for (let i = 1; i <= 100000; i++) {
       itemCount++;
-      writeStream.write(JSON.stringify(makeProduct(itemCount)));
+      writeStream.write(JSON.stringify(makeSQLProduct.makeFakeSQLProduct(itemCount)));
       insertCount++;
     }
     debug(`Wrote ${insertCount} items`);
   }
-  while(insertCount < 10000000) {
-    createProducts();
+  while(insertCount < 1000000) {
+    createSQLProducts();
   }
   debug('done')
   writeStream.end();
 }
 
+const makeSQLImageDatabaseSeederFile = () => {
+  const writeStream = fs.createWriteStream('carouselImages.csv');
+  const headerImage = "listing_image_id,listing_id,url_75x75,url_170x135,url_570xN,url_fullxfull,full_height,full_width\n";
+  writeStream.write(headerImage);
+  let insertCount = 0;
+  let itemCount = 100000000;
+  let createSQLImages = () => {
+    for (let i = 1; i <= 100000; i++) {
+      itemCount++;
+      writeStream.write(JSON.stringify(makeSQLProduct.makeFakeSQLImage(itemCount)));
+      insertCount++;
+    }
+    debug(`Wrote ${insertCount} items`);
+  }
+  while(insertCount < 1000000) {
+    createSQLImages();
+  }
+  debug('done')
+  writeStream.end();
+}
 
-
-  // const stream = fs.createWriteStream('products.json');
-  // let insertCount = 0;
-  // let itemCount = 0;
-  // let createItem = () => {
-  //     for (let i = 0; i < 100000; i++) {
-  //         itemCount++;
-  //         let item = {};
-  //         item._id = itemCount;
-  //         item.title = faker.commerce.productName();
-  //         item.price = faker.commerce.price();
-  //         item.description = faker.lorem.lines();
-  //         item.shopName = faker.company.companyName();
-  //         item.shopId = faker.random.number();
-  //         item.shopStars = faker.random.number({ min: 1, max: 5 });
-  //         item.productOptions = [
-  //             {
-  //                 title: 'color',
-  //                 description_1: faker.commerce.color()
-  //             }]
-  //         stream.write(JSON.stringify(item));
-  //     }
-  //     debug(`wrote ${itemCount} items`);
-  //     if (itemCount < 10000000) {
-  //         createItem();
-  //     }
-  // }
-  // createItem();
-  // debug('done')
-  // stream.end();
-
-  //   Products.countDocuments((err, count) => {
-  //     if(err){
-  //       console.log('error counting')
-  //     }else{
-  //       if(count === 0){
-  //         productsSave(jewelry.results);
-  //         productsSave(housewares.results);
-  //         productsSave(accessories.results);
-  //         productsSave(toys.results);
-  //     }
-  //   }
-  // })
-// }
-
-module.exports.makeDatabaseSeederFile = makeDatabaseSeederFile;
-module.exports.Products = Products;
+module.exports = { Products, makeSQLProductDatabaseSeederFile, makeSQLImageDatabaseSeederFile };

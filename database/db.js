@@ -8,7 +8,7 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect(`mongodb://localhost:${port}/forgEtsyImageCarouselDB`)
+mongoose.connect(`mongodb://localhost:${port}/forgEtsyCarouselDB`)
 
 // Multiple db connections
 const db = mongoose.connection;
@@ -19,7 +19,6 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'db1 connection error:'));
 db.once('open', function() {
   console.log(`db1 connected!`)
-  makeDatabaseSeederFile();
 })
 // db2.on('error', console.error.bind(console, 'db2 connection error:'));
 // db2.once('open', function() {
@@ -83,6 +82,3 @@ const toggleFavorite = (productId, favorite, callback) => {
 module.exports.getImageUrls = getImageUrls;
 module.exports.getRandomProduct = getRandomProduct;
 module.exports.toggleFavorite = toggleFavorite;
-
-
-

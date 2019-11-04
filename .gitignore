@@ -1,4 +1,9 @@
 node_modules
 .DS_Store
 .env
-products.json
+carouselProducts1.json
+carouselProducts2.json
+carouselProducts3.csv
+carouselProducts4.csv
+carouselImages.csv
+carouselImages2.csv
