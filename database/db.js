@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const { makeDatabaseSeederFile, Products } = require('./schema.js');
+const { Products } = require('./schema.js');
+const debug = require('debug')('debugger');
 
 // Connect database
 let port = '27017'
@@ -34,6 +35,7 @@ db.once('open', function() {
 // })
 
 const getImageUrls = (productId, callback) => {
+  debug('top of call')
   Products.find({listing_id: productId}, (err, results) => {
     if(results.length === 0){
       results[0] = {
@@ -44,10 +46,13 @@ const getImageUrls = (productId, callback) => {
     if(err){
       callback(err, null);
     }else{
+      debug('bottom of call')
       callback(null, results);
     }
   })
 }
+
+getImageUrls(100000013, (a, b) => console.log('this is the console log', b))
 
 const getRandomProduct = (callback) => {
   Products.count((err, count) => {
