@@ -1,8 +1,17 @@
 const mongoose = require('mongoose');
 const { Products } = require('./schema.js');
-const debug = require('debug')('debugger');
+// const debug = require('debug')('debugger');
+// const { PostgresConnection } = require('pg');
 
-// Connect database
+// Connect Postgres
+// var connectionString = "postgres://postgres:postgres@localhost:5432/postgres";
+// const postgresDB = new PostgresConnection({
+//     connectionString: connectionString
+// })
+
+// postgresDB.connect();
+
+// Connect MongoDB
 let port = '27017'
 // let port = 'mongo'
 mongoose.set('useNewUrlParser', true);
@@ -11,11 +20,12 @@ mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.connect(`mongodb://localhost:${port}/forgEtsyCarouselDB`)
 
-// Multiple db connections
+// Multiple mongoose connections
 const db = mongoose.connection;
 // const db2 = mongoose.connection;
 // const db3 = mongoose.connection;
 // const db4 = mongoose.connection;
+
 // Multiple db connections
 db.on('error', console.error.bind(console, 'db1 connection error:'));
 db.once('open', function() {
@@ -34,8 +44,9 @@ db.once('open', function() {
 //   console.log(`db4 connected!`)
 // })
 
+
+// MongoDB queries
 const getImageUrls = (productId, callback) => {
-  debug('top of call')
   Products.find({listing_id: productId}, (err, results) => {
     if(results.length === 0){
       results[0] = {
@@ -46,13 +57,10 @@ const getImageUrls = (productId, callback) => {
     if(err){
       callback(err, null);
     }else{
-      debug('bottom of call')
       callback(null, results);
     }
   })
 }
-
-getImageUrls(100000013, (a, b) => console.log('this is the console log', b))
 
 const getRandomProduct = (callback) => {
   Products.count((err, count) => {
