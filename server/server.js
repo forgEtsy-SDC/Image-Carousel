@@ -1,21 +1,21 @@
+// Dependencies
+require('newrelic');
 const express = require('express')
-const { getImageUrls, getRandomProduct, toggleFavorite } = require('../database/db.js')
 const path = require('path');
 const cors = require('cors');
+const { getImageUrls, getRandomProduct, toggleFavorite } = require('../database/db.js')
 
+// Instantation
 const app = express();
+let port = 3003;
 
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '/../dist')));
 app.use(cors());
 
-let port = 3003;
-
-app.listen(port, () => {
-  console.log(`Listening on port ${port}...`);
-})
-
+// Routes
 app.get('/urls', (req, res) => {
   getImageUrls(req.query.productId, (err, urls) => {
     if(err){
@@ -75,4 +75,10 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/../dist/index.html"))
 })
 
-module.exports.port = port;
+// Exports
+// module.exports.port = port;
+
+// Listening
+app.listen(port, () => {
+  console.log(`Listening on port ${port}...`);
+});
